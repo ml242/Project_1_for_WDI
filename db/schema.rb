@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131021223156) do
+ActiveRecord::Schema.define(:version => 20131021230124) do
 
   create_table "routes", :force => true do |t|
     t.string  "name"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(:version => 20131021223156) do
     t.integer "danger"
     t.string  "grade"
     t.text    "comments"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string  "name"
+    t.string  "email"
+    t.string  "password"
+    t.string  "climber_name"
+    t.string  "face_location"
+    t.string  "avatar"
+    t.text    "description"
+    t.integer "phone"
   end
 
 end
