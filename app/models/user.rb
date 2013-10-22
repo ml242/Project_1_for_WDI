@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :climbs
   has_many :ascends, :through => :climbs
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password

@@ -1,4 +1,5 @@
 class Ascend < ActiveRecord::Base
-  has_many :users, :through => :ascends
-  belongs_to :crags
+  has_many :climbs
+  has_many :users, :through => :climbs
+  belongs_to :crag
 end
