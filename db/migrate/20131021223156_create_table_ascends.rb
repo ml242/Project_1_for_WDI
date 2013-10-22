@@ -7,6 +7,7 @@ class CreateTableAscends < ActiveRecord::Migration
       t.integer :danger
       t.string :grade
       t.text :comments
+      t.integer :crag_id
     end
   end
 end

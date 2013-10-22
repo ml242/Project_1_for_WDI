@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20131021231343) do
     t.integer "danger"
     t.string  "grade"
     t.text    "comments"
+    t.integer "crag_id"
   end
 
   create_table "climbs", :force => true do |t|
