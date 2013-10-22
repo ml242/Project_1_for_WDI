@@ -1,5 +1,6 @@
 GrandSendStation::Application.routes.draw do
 
+  get '/' => "users#new"
   get '/signup' => "users#new"
   get '/login' => 'session#new'
   post '/login' => 'session#create'
