@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(:version => 20131022014322) do
     t.string  "email"
     t.string  "password_digest"
     t.string  "climber_name"
-    t.string  "face_location"
     t.string  "avatar"
     t.text    "description"
     t.integer "phone"
