@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(:version => 20131021231343) do
 
+  create_table "ascends", :force => true do |t|
+    t.string  "name"
+    t.string  "face_location"
+    t.text    "description"
+    t.integer "danger"
+    t.string  "grade"
+    t.text    "comments"
+  end
+
   create_table "climbs", :force => true do |t|
     t.text     "histories"
     t.integer  "stars"
@@ -22,23 +31,12 @@ ActiveRecord::Schema.define(:version => 20131021231343) do
 
   create_table "crags", :force => true do |t|
     t.string   "name"
-    t.integer  "crag_id"
     t.text     "description"
     t.string   "photo"
     t.string   "gps_coor"
     t.string   "gps_photo"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "routes", :force => true do |t|
-    t.string  "name"
-    t.integer "route_id"
-    t.string  "face_location"
-    t.text    "description"
-    t.integer "danger"
-    t.string  "grade"
-    t.text    "comments"
   end
 
   create_table "users", :force => true do |t|

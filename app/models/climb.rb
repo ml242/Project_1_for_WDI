@@ -1,4 +1,4 @@
 class Climb < ActiveRecord::Base
   belongs_to :users
-  belongs_to :routes
+  belongs_to :ascends
 end
