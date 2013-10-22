@@ -4,8 +4,13 @@ GrandSendStation::Application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
 
-  resources :users
-  resources :routes
+  resources :users do
+    resources :climbs
+  end
+
+  resources :crags do
+    resources :ascends
+  end
 
 
   # The priority is based upon order of creation:

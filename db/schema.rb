@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131021231343) do
+ActiveRecord::Schema.define(:version => 20131022014322) do
 
   create_table "ascends", :force => true do |t|
     t.string  "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20131021231343) do
     t.integer "danger"
     t.string  "grade"
     t.text    "comments"
+    t.integer "crag_id"
   end
 
   create_table "climbs", :force => true do |t|
