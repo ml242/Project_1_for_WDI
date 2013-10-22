@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20131021231343) do
   create_table "users", :force => true do |t|
     t.string  "name"
     t.string  "email"
-    t.string  "password"
+    t.string  "password_digest"
     t.string  "climber_name"
     t.string  "face_location"
     t.string  "avatar"
