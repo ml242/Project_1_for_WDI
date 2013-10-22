@@ -1,5 +1,7 @@
 Hi, <%= @user.email %>
 <% session %>
+<%= @user.ascends.all %>
 
-<%= link_to 'Add a route', '/climbs/new', '/ascends/new', '/crags/new' %>
+<%= link_to 'Add an ascent', '/ascends/new' %>
+<%= link_to 'Add a route', '/climbs/new' %>
 
