@@ -1,5 +1,5 @@
-class AscendsController < ApplicationController
+class ClimbsController < ApplicationController
   def new
-    @ascends = Ascends.new
+    @ascend = Ascend.new
   end
 end
