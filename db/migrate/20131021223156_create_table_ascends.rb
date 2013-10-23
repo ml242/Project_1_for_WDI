@@ -4,7 +4,7 @@ class CreateTableAscends < ActiveRecord::Migration
       t.string :name
       t.string :face_location
       t.text :description
-      t.integer :danger
+      t.boolean :danger
       t.string :grade
       t.text :comments
       t.integer :crag_id

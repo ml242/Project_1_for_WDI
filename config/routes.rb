@@ -1,5 +1,5 @@
 GrandSendStation::Application.routes.draw do
-
+  # OPTIMIZE use root to: instead of get '/'
   get '/' => "session#new"
   get '/signup' => "users#new"
   get '/login' => 'session#new'
@@ -8,7 +8,7 @@ GrandSendStation::Application.routes.draw do
   resources :users do
     resources :climbs
   end
-
+# FIX ME remove crags and make ascends it's own route
   resources :crags do
     resources :ascends
   end

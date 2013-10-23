@@ -11,25 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131023124041) do
+ActiveRecord::Schema.define(:version => 20131021231343) do
 
   create_table "ascends", :force => true do |t|
     t.string  "name"
     t.string  "face_location"
     t.text    "description"
-    t.integer "danger"
+    t.boolean "danger"
     t.string  "grade"
     t.text    "comments"
     t.integer "crag_id"
   end
 
   create_table "climbs", :force => true do |t|
-    t.text     "histories"
+    t.text     "description"
     t.integer  "stars"
     t.integer  "user_id"
     t.integer  "ascend_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "crags", :force => true do |t|

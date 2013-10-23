@@ -1,6 +1,7 @@
 Hi, <%= @user.email %>
 <br><% session %>
-<%= @user.climbs[0][:ascend_id] %>
+<%# TODO display personal climbs here with links to the routes %>
+<%= @user.climbs %>
 <br>
 
 <%= link_to 'Add a personal climb to your book', new_user_climb_path(@user) %>

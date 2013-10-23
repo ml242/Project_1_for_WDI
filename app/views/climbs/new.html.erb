@@ -1,8 +1,8 @@
 <h1>Hey, let's add a climb.</h1>
 
-<%= form_for [@user, @climb] do |f| %>
+<%= form_for([@user, @climb]) do |f| %>
 <%= f.label "What climb do you want to add?" %>
 <%= f.text_field :histories, :placeholder => "Description.." %>
-<!-- drop down for stars -->
+<%# TODO make dropdown which pulls routes from AR ascends to add the specific info %>
 <% f.submit "add Climb" %>
 <% end %>

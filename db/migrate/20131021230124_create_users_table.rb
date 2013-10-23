@@ -7,7 +7,7 @@ def change
       t.string :climber_name
       t.string :avatar
       t.text :description
-      t.integer :phone
+      t.binary :phone
     end
   end
 end

@@ -1,7 +1,7 @@
 class CreateTableClimbs < ActiveRecord::Migration
   def change
     create_table :climbs do |t|
-      t.text :histories
+      t.text :description
       t.integer :stars
       t.integer :user_id
       t.integer :ascend_id

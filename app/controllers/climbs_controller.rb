@@ -1,9 +1,9 @@
 class ClimbsController < ApplicationController
   def new
-    @user = params[:user_id]
+    # FIXME @user needs to be the user object
+    @user = User.find(params[:user_id])
     @climb = Climb.new
     @ascends = Ascend.all
-    @crags = Crag.all
   end
 
   def show
