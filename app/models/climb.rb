@@ -12,7 +12,7 @@
 #
 
 class Climb < ActiveRecord::Base
-  attr_accessible :histories, :stars, :user_id, :ascend_id
+  attr_accessible :description, :stars, :user_id, :ascend_id
   belongs_to :user
   belongs_to :ascend
 end

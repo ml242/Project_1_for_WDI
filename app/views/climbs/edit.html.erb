@@ -1,0 +1,12 @@
+hey im editing your climbingz
+<br><br>
+<% ascend = Ascend.find(@climb[:ascend_id]) %>
+<%= ascend[:name] %>
+
+<br> <%= form_for([@user, @climb]) do |f| %>
+<br>   <%= f.label "Notes from your climb" %>
+<br>   <%= f.text_field :description %>
+<br>   <%= f.label "How many Stars would you rate it?" %>
+<br>   <%= f.select :stars, options_for_select([["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]]) %>
+<br><br> <%= f.submit "Update Your Climb Status" %>
+<% end %>

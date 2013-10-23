@@ -1,1 +1,6 @@
-going here
+<h1>Welcome to Rat Rock</h1>
+
+<% @ascends.each do |ascend| %>
+<br>
+<div class="rat_climbs"><li><a href="/ascends/<%= ascend[:id] %>"><%= ascend[:name] %></li></div>
+<% end %>

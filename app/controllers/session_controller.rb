@@ -13,4 +13,7 @@ class SessionController < ApplicationController
       render :new
     end
   end
+  def destroy
+    session[:user_id] = @user_id.delete
+  end
 end

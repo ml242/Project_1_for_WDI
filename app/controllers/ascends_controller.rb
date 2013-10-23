@@ -6,7 +6,7 @@ class AscendsController < ApplicationController
     @ascends = Ascend.new
   end
   def show
-    @ascends = Ascend.find(params[:id])
+    @ascend = Ascend.find(params[:id])
   end
   def create
     @ascends = Ascend.create

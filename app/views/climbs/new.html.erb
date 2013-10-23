@@ -2,7 +2,7 @@
 <%= form_for([@user, @climb]) do |f| %>
 <%= f.label "What climb do you want to add?" %>
 <%# TODO make dropdown which pulls routes from AR ascends to add the specific info %>
-<%= f.select :ascend_id, options_from_collection_for_select(@ascends, :grade, :name) %>
+<%= f.select :ascend_id, options_from_collection_for_select(@ascends, :id, :name) %>
 <%# f.label "Anything you would like to share?" %>
 <%# f.text_field :description "Anything you'd like to share?" %>
 <%= f.submit "add Climb" %>
