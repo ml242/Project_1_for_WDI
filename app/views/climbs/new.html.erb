@@ -1,6 +1,8 @@
 <h1>Hey, let's add a climb.</h1>
 
-<%= form_for @user do |f| %>
+<%= form_for [@user, @climb] do |f| %>
 <%= f.label "What climb do you want to add?" %>
+<%= f.text_field :histories, :placeholder => "Description.." %>
+<!-- drop down for stars -->
 <% f.submit "add Climb" %>
 <% end %>
