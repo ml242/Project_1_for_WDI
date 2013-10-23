@@ -5,4 +5,15 @@ class ClimbsController < ApplicationController
     @ascends = Ascend.all
     @crags = Crag.all
   end
+
+  def show
+  end
+
+  def index
+  end
+
+  def create
+  end
+
+
 end

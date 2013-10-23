@@ -1,20 +1,21 @@
 class CragsController < ApplicationController
   def index
-    @crag = Crag.all
+    @crags = Crag.all
   end
   def new
-    @crag = Crag.new
+    @crags = Crag.new
   end
   def show
-    @crag = Crags.find(params[:id])
+    @crags = Crag.find(params[:id])
+    @ascends
   end
   def create
-    @crag = Crag.create
+    @crags = Crag.create
   end
   def destroy
-    @crag = Crag.delete
+    @crags = Crag.delete
   end
   def edit
-    @crag = Crag.find(params[:id])
+    @crags = Crag.find(params[:id])
   end
 end
