@@ -1,4 +1,7 @@
-<!-- <footer>
-  <small>2013</small>
-</footer>
- -->
+ <%= link_to 'Ascends', '/ascends' %> | <%= link_to 'Main', '/users' %> |
+<% if session[:user_id] %>
+  <%= link_to 'My Account', "/users/#{session[:user_id]}" %>
+<% end %> |
+<% if session[:user_id] %>
+  <%= link_to 'Logout', "/logout" %>
+<% end %>

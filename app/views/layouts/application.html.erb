@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--   <title>JamzApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <title>Grand Send Station</title>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="header">
+
+  </div>
 
 <%= flash[:notice] %>
 
-<%= render partial: 'layouts/nav' %> -->
+
 <%= yield %>
+<br><br>
+<%= render partial: 'layouts/footer' %>
 </body>
 </html>

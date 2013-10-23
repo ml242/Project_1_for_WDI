@@ -2,3 +2,7 @@
 
 <li><%= @ascend[:name] %></li>
 <li><%= @ascend[:grade] %></li>
+<li><%= @ascend[:face_location] %></li>
+<% if @ascend[:is_dangerous] %>
+<li><%= @ascend[:is_dangerous] %></li>
+<% end %>
