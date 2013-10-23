@@ -1,5 +1,8 @@
 class ClimbsController < ApplicationController
   def new
-    @ascend = Ascend.new
+    @user = params[:user_id]
+    @climb = Climb.new
+    @ascends = Ascend.all
+    @crags = Crag.all
   end
 end

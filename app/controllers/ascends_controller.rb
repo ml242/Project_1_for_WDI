@@ -1,15 +1,18 @@
-class AscendsController < ActionController::Base
+class AscendsController < ApplicationController
+  def index
+    @ascends = Ascend.all
+  end
   def new
-    @ascend = Ascend.new
+    @ascends = Ascend.new
   end
   def show
-    @ascend = Ascend.find(params[:id])
+    @ascends = Ascend.find(params[:id])
   end
   def create
-    @ascend = Ascend.create
+    @ascends = Ascend.create
   end
   def edit
-    @ascend = Ascend.find params[:id]
+    @ascends = Ascend.find params[:id]
   end
   def update
     ascend = Ascend.find(params[:id]).update_attributes params[:ascend]

@@ -2,6 +2,4 @@ Hi, <%= @user.email %>
 <% session %>
 <%= @user.ascends.all %>
 
-<%= link_to 'Add an ascent', '/ascends/new' %>
-<%= link_to 'Add a route', '/climbs/new' %>
-
+<%= link_to 'Add a personal climb to your book', new_user_climb_path(@user) %>

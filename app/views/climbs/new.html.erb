@@ -1,1 +1,8 @@
 <h1>Hey, let's add a climb.</h1>
+
+<%= form_for @user do |f| %>
+<%= f.label "What climb do you want to add?" %>
+<%= f.select @Crag.all %>
+<%= f.select @Ascend.all %>
+<% f.submit "add Climb" %>
+<% end %>
