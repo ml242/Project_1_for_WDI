@@ -9,9 +9,7 @@ GrandSendStation::Application.routes.draw do
     resources :climbs
   end
 # FIX ME remove crags and make ascends it's own route
-  resources :crags do
     resources :ascends
-  end
 
 
   # The priority is based upon order of creation:
