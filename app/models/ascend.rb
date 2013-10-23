@@ -13,7 +13,7 @@
 #
 
 class Ascend < ActiveRecord::Base
-  attr_accessible :name, :face_location, :description, :danger, :grade, :comments, :crag_id
+  attr_accessible :name, :face_location, :description, :is_dangerous, :grade, :comments, :crag_id
   has_many :climbs
   has_many :users, :through => :climbs
   belongs_to :crag
