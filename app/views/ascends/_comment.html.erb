@@ -1,0 +1,23 @@
+In show:
+
+<div class="comments">
+<h5>Comments</h5>
+<ul class="comments-list">
+<%= render :partial => 'climbs', :collection => @climbs.description %>
+</ul>
+</div>
+
+Here:
+
+<% unless description.new_record? %>
+<li>
+  <div class="comment">
+    <span class="comment-datetime">
+      Posted <%= time_ago_in_words(comment.created_at) %> ago
+    </span>
+    <div class="comment-body">
+      <%= climbs.description %>
+    </div>
+  </div>
+</li>
+<% end %>

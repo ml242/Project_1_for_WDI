@@ -1,8 +1,15 @@
 <h1>hello i'm the show of ascends</h1>
 
-<li><%= @ascend[:name] %></li>
-<li><%= @ascend[:grade] %></li>
-<li><%= @ascend[:face_location] %></li>
+<li>Name: <%= @ascend[:name] %></li>
+<li>Difficulty: <%= @ascend[:grade] %></li>
+<li>Face location: <%= @ascend[:face_location] %></li>
 <% if @ascend[:is_dangerous] %>
-<li><%= @ascend[:is_dangerous] %></li>
+<li>Is this climb dangerous? <%= @ascend[:is_dangerous] %></li>
+<% end %>
+<br>
+<div class="notes">
+
+<% @climbs.each do |climb| %>
+<ul><li>user notes: <div class="time"><%= climb[:name] %><%= climb[:created_at] %></div></li></ul>
+<%= climb[:description] %></div>
 <% end %>
