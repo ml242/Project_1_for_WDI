@@ -1,6 +1,10 @@
-<h1>Welcome to Rat Rock</h1>
-
+<h1>Rat Rock</h1>
+<p>Rat Rock is the premiere location to boulder in Central Park. On a given day you can find local residents who have been at the crag for decades as well as tourists taking a break from New York's other offerings to enjoy the park. The scene here is as friendly as it is storied. Below are most of the featured routes as well as where they reside on the rock.</p>
+<div class="rat_routes">
 <% @ascends.each do |ascend| %>
 <br>
 <div class="rat_climbs"><li><a href="/ascends/<%= ascend[:id] %>"><%= ascend[:name] %></li></div>
 <% end %>
+<div>
+<div class="map">
+</div>

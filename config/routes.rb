@@ -1,17 +1,16 @@
 GrandSendStation::Application.routes.draw do
   # OPTIMIZE use root to: instead of get '/'
+
+  resources :users do
+    resources :climbs
+  end
+  resources :ascends
+
   get '/' => "session#new"
   get '/signup' => "users#new"
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   get '/logout' => 'session#destroy'
-
-  resources :users do
-    resources :climbs
-  end
-# FIX ME remove crags and make ascends it's own route
-  resources :ascends
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

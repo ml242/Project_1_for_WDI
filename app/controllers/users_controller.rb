@@ -22,6 +22,5 @@ class UsersController < ApplicationController
   end
   def edit
     @user = User.find(params[:id])
-    render :new
   end
 end

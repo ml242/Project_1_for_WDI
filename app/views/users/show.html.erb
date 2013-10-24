@@ -1,15 +1,12 @@
-Hi, <%= @user.email %>
+Hi, <%= @user.name %> | <%= link_to 'Edit Your Details', "/users/#{@user.id}/edit" %>
 <br><% session %>
-<%# TODO display personal climbs here with links to the routes %>
 <% @user.climbs.each do |climb| %>
-  <% ascend = Ascend.find(climb[:ascend_id]) %>
+<div class="user">  <% ascend = Ascend.find(climb[:ascend_id]) %>
   <br>
-  <li><a href="/ascends/<%= climb[:ascend_id] %>"><%= ascend[:name] %></li>
-  <li><%= link_to 'Add some details to this climb', edit_user_climb_path(@user, climb) %></li>
+<div class="route">  <li><a href="/ascends/<%= climb[:ascend_id] %>"><%= ascend[:name] %></li></div>
+<div class="deets">  <li><%= link_to 'Add some details to this climb', edit_user_climb_path(@user, climb) %></li></div>
   <br>
-  <br>
-  <br>
-  <br>
+</div>
 <% end %>
 <br>
-<%= link_to 'Add a new climb to your done list', new_user_climb_path(@user) %>
+<h2><%= link_to 'Add a new climb to your done list', new_user_climb_path(@user) %></h2>

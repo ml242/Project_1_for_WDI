@@ -1,8 +1,5 @@
-<% client = Weatherman::Client.new %>
-<h1>Grand Send Station</h1>
-The temperature is: <%=client.lookup_by_location('11101').condition['temp']%>
-<br>
-<br>
+<br><br>
+<h3>Check out some of the climbers in our community.</h3>
 <% @users.each do |user| %>
 <div class="user_table"><li><a href="/users/<%= user[:id] %>"><%= user[:name] %></li></div>
 <% end %>
