@@ -8,7 +8,7 @@ class SessionController < ApplicationController
     if @user && @user.authenticate(password)
       session[:user_id] = @user.id
       # redirect_to("/users/#{user.id}")
-      redirect_to(@user)
+      redirect_to('/users')
     else
       render :new
     end

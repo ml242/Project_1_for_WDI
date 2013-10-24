@@ -2,7 +2,7 @@
 <nav>
 <h1>Welcome to the Grand Send Station</h1>
 <% client = Weatherman::Client.new %>
-<p>The temperature is: <%=client.lookup_by_location('11101').condition['temp']%> degrees. Perfect for climbing in Central Park!</p>
+<p>The temperature is: <%=client.lookup_by_location('11101').condition['temp']%> degrees, celsius. Perfect for climbing in Central Park!</p>
 <!--
   <ul>
     <li>Home</li>

@@ -1,5 +1,9 @@
-<br><br>
 <h3>Check out some of the climbers in our community.</h3>
 <% @users.each do |user| %>
-<div class="user_table"><li><a href="/users/<%= user[:id] %>"><%= user[:name] %></li></div>
+
+<div class="user_name_main"><li>name: <a href="/users/<%= user[:id] %>"><%= user[:name] %></a>  |
+  <% if user.climbs.any? %>
+    <% rec_climb = Ascend.find(user.climbs.last.ascend_id) %>
+      recent climb:  <a href="/ascends/<%= rec_climb.id %>"> <%= rec_climb.name %></a></li></div>
+  <% end %>
 <% end %>
