@@ -1,14 +1,13 @@
-<h1>hello i'm the show of ascends</h1>
-
 <li>Name: <%= @ascend[:name] %></li>
 <li>Difficulty: <%= @ascend[:grade] %></li>
 <li>Face location: <%= @ascend[:face_location] %></li>
 <% if @ascend[:is_dangerous] %>
 <li>Is this climb dangerous? <%= @ascend[:is_dangerous] %></li>
 <% end %>
-<% if @climbs[0].stars > 0 %>
-<li>Star Count: <%= @climbs[0].stars %></li>
-<% end %>
+
+<%# if @climbs[0].stars > 0 %>
+<!-- <li>Star Count: <%#= @climbs[0].stars %></li> -->
+<%# end %>
 <br>
 <div class="notes">
 

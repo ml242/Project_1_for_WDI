@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate
   def index
     @users = User.all
     @ascends = Ascend.all
@@ -22,11 +23,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   def edit
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
   end
   def update
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
     redirect_to(@user)
+  end
+
+
+  def authenticate
+    if session[:used_id]
+      @current_user = User.find(session[:user_id])
+    end
   end
 end

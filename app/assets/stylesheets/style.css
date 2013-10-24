@@ -1,0 +1,47 @@
+header {
+  background-color: #2F363E;
+  padding: 20px;
+}
+
+nav {
+}
+
+.container {
+  line-height: 1.4;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mmmain {
+  margin-bottom: 9%;
+}
+
+.user_name_main {
+  float: left;
+}
+
+.photo_m {
+  float: left;
+  margin-bottom: 9%;
+}
+
+.text1 {
+  background-color: white;
+  width: 60%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+.photo_m img {
+  width: 25%;
+  height: 25%;
+}
+
+.rat_routes {
+  margin-bottom: 25px;
+}
+
+[role="banner"] h1{
+margin: 0;
+}

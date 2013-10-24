@@ -27,5 +27,5 @@ class ClimbsController < ApplicationController
     c1 = Climb.find(params[:id])
     c1.update_attributes(params[:climb])
     redirect_to(@user)
-    end
+  end
 end

@@ -1,13 +1,18 @@
-<%= flash[:notice] %>
-<p>This site intends to document the climbing scene at Rat Rock in Central Park from a social perspective.</p>
-<p>Please login or create an account to access Grand Send Station.</p>
-<br><br>
-<%= form_tag('/login') do %>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Login" %>
-<% end %>
-<br><br>
-<%= link_to "Create an Account", new_user_path %>
+<section>
+
+
+  <div class="text1">This site intends to document the climbing scene at Rat Rock in Central Park from a social perspective. Please login or create an account to access Grand Send Station.</div>
+
+  <div class="text1">
+    <%= form_tag('/login') do %>
+      <br><%= label_tag :email %>
+      <%= text_field_tag :email %>
+      <br><%= label_tag :password %>
+      <%= password_field_tag :password %>
+      <br><br><%= submit_tag "Login" %>
+    <% end %>
+    <br>
+    <%= link_to "Create an Account", new_user_path %>
+  </div>
+
+</section>

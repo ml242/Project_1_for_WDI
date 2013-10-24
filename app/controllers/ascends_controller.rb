@@ -8,6 +8,8 @@ class AscendsController < ApplicationController
   def show
     @ascend = Ascend.find(params[:id])
     @climbs = @ascend.climbs || []
+    # @climbs.stars = @climbs.stars || []
+    @users = User.all
   end
   def create
     @ascends = Ascend.create
