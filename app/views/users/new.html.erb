@@ -11,6 +11,8 @@ then when the create action renders new, @user.errors will have errors.
 <% end %>
 
 <%= form_for(@user) do |f| %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
   <%= f.label :email %>
   <%= f.text_field :email %><br>
   <%= f.label :password %>
