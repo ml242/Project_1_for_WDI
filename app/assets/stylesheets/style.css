@@ -43,6 +43,60 @@ color: red;
   margin: 15px;
 }
 
+.text2 {
+  background-color: rgba(255, 255, 255, .85);
+  float: left;
+  position: absolute;
+  margin-top: 200px;
+  width: 40%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+.text3 {
+  background-color: rgba(255, 255, 255, .85);
+  width: 40%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+.text4 {
+  background-color: rgba(255, 255, 255, .85);
+  width: 40%;
+  float: left;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+.rat_routes {
+  float: left;
+  background-color: rgba(255, 255, 255, .85);
+  width: 40%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+.photo_m {
+  float: left;
+  position: absolute;
+  margin-left: 625px;
+  margin-top: 315px;
+}
+
+.photo_m img {
+  border-radius: 25px;
+  width: 45%;
+  height: 45%;
+}
+
+.rapper {
+  overflow: hidden;
+}
+
 .text1 a, .text1 a:link, .text1 a:visited{
   color: red;
 }
@@ -52,14 +106,18 @@ color: red;
   display: inline-block;
 }
 
-.photo_m img {
-  width: 25%;
-  height: 25%;
+.text1edit {
+  background-color: rgba(255, 255, 255, .85);
+  width: 40%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
+}
+.text1edit label {
+  width: 125px;
+  display: inline-block;
 }
 
-.rat_routes {
-  margin-bottom: 25px;
-}
 
 [role="banner"] h1{
 margin: 0;
@@ -71,4 +129,8 @@ color: #EEEEEE;
 
 .user_edit {
   margin-top: 44px;
+}
+
+.deets a li {
+  font-size-adjust: .6;
 }

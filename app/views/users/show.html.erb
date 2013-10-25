@@ -1,10 +1,12 @@
 <div class="text1">
+<ul>
 <% @user.climbs.each do |climb| %>
-<div class="mmmain">  <% ascend = Ascend.find(climb[:ascend_id]) %>
-<div class="route"> <li><a href="/ascends/<%= climb[:ascend_id] %>"><%= ascend[:name] %></li></div>
-<div class="deets"> <li><%= link_to 'Add some details to this climb', edit_user_climb_path(@user, climb) %></li></div>
-</div>
-<% end %>
-</div>
+  <% ascend = Ascend.find(climb[:ascend_id]) %>
+  <li><a href="/ascends/<%= climb[:ascend_id] %>"><%= ascend[:name] %></a> |
+  <%= link_to 'Add Details', edit_user_climb_path(@user, climb) %></a></li>
 <br>
-<h3><%= link_to 'Add a new climb to your done list', new_user_climb_path(@user) %></h3>
+<% end %>
+</ul></div>
+<br>
+
+<div class="text1"><h3><%= link_to 'Add a new climb to your tick list', new_user_climb_path(@user) %></h3></div>

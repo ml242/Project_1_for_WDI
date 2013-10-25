@@ -1,17 +1,19 @@
+<div class="text1">
 <li>Name: <%= @ascend[:name] %></li>
 <li>Difficulty: <%= @ascend[:grade] %></li>
 <li>Face location: <%= @ascend[:face_location] %></li>
 <% if @ascend[:is_dangerous] %>
 <li>Is this climb dangerous? <%= @ascend[:is_dangerous] %></li>
 <% end %>
-
+</div>
 <%# if @climbs[0].stars > 0 %>
 <!-- <li>Star Count: <%#= @climbs[0].stars %></li> -->
 <%# end %>
 <br>
 <div class="notes">
-
+<div class="text1">
 <% @climbs.each do |climb| %>
 <ul><li>user notes: <div class="time"><%= climb[:name] %><%= climb[:created_at] %></div></li></ul>
 <%= climb[:description] %></div>
 <% end %>
+</div>

@@ -1,4 +1,4 @@
-<div class="text1">
+<div class="text1edit">
 edit your deets, brah
 <%= form_for(@current_user) do |f| %>
 <br>  <%= f.label :name %>
@@ -15,7 +15,7 @@ edit your deets, brah
   <%= f.text_field :description %>
  <br> <%= f.label :password %>
   <%= f.password_field :password %>
- <br> <%= f.label :password_confirmation %>
+ <br> <%= f.label :confirmation %>
   <%= f.password_field :password_confirmation %><br>
  <br> <%= f.submit "Update Account" %>
 <% end %>
