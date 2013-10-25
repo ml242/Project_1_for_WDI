@@ -10,7 +10,7 @@
     <% if session[:user_id] %>
       <%= render 'layouts/logged' %>
     <% end %> |
-    <%= link_to 'Ascends', '/ascends' %> | <%= link_to 'Main', '/users' %> |
+    <%= link_to 'Routes', '/ascends' %> | <%= link_to 'Main', '/users' %> |
     <% if session[:user_id] %>
       <%= link_to 'Logout', "/logout" %>
     <% end %>
