@@ -10,10 +10,10 @@
 <!-- <li>Star Count: <%#= @climbs[0].stars %></li> -->
 <%# end %>
 <br>
+<% @climbs.each do |climb| %>
 <div class="notes">
 <div class="text1">
-<% @climbs.each do |climb| %>
 <ul><li>user notes: <div class="time"><%= climb[:name] %><%= climb[:created_at] %></div></li></ul>
 <%= climb[:description] %></div>
-<% end %>
 </div>
+<% end %>
