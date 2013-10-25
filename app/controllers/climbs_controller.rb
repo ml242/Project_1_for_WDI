@@ -13,7 +13,8 @@ class ClimbsController < ApplicationController
     @user = User.find(params[:user_id])
     @climb = Climb.create(params[:climb])
     @user.climbs << @climb
-    redirect_to(@user)
+    redirect_to(edit_user_climb_path(@user, @climb))
+    # redirect_to("users/#{params[:user_id]}/climbs/#{@user.climb}")
   end
 
 

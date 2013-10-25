@@ -10,14 +10,10 @@
   <%= render 'layouts/nav' %>
   <%= flash[:notice] %>
   <section class="container">
-    <% if session[:user_id] %>
-      <%= render 'layouts/logged' %>
-    <% end %>
+
       <%#= render 'layouts/messages' %>
     <%= yield %>
   <br><br><br>
-  <%= render partial: 'layouts/footer' %>
-
   </section>
   </body>
 </html>

@@ -1,11 +1,21 @@
 header {
   background-color: #2F363E;
-  padding: 20px;
+  margin-bottom: 40px;
 }
 
-nav {
+html {
+  background: url("/assets/IMG_0214.jpg") no-repeat center center;
+  background-size: cover;
 }
 
+a, a:link, a:visited {
+color: red;
+}
+
+.login {
+  padding-left: 150px;
+  padding-top: 150px;
+}
 .container {
   line-height: 1.4;
   width: 80%;
@@ -26,11 +36,20 @@ nav {
 }
 
 .text1 {
-  background-color: white;
-  width: 60%;
+  background-color: rgba(255, 255, 255, .85);
+  width: 40%;
   border: black 1px solid;
   padding: 15px;
   margin: 15px;
+}
+
+.text1 a, .text1 a:link, .text1 a:visited{
+  color: red;
+}
+
+.login label {
+  width: 100px;
+  display: inline-block;
 }
 
 .photo_m img {
@@ -44,4 +63,12 @@ nav {
 
 [role="banner"] h1{
 margin: 0;
+}
+
+[role="banner"] {
+color: #EEEEEE;
+}
+
+.user_edit {
+  margin-top: 44px;
 }

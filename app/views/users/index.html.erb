@@ -1,4 +1,4 @@
-<div class="mmmain">
+<div class="text1">
   <p>Check out some of the climbers in our community.</p>
   <% @users.each do |user| %>
   <li>name: <a href="/users/<%= user[:id] %>"><%= user[:name] %></a>  |
@@ -6,8 +6,7 @@
     <% rec_climb = Ascend.find(user.climbs.last.ascend_id) %>
       recent climb:  <a href="/ascends/<%= rec_climb.id %>"><%= rec_climb.name %></a></li>
   <% end %>
-
 <% end %>
 </div>
 
-<div class="photo_m"><img src="img_0214.jpg"></div>
+<div class="photo_m"></div>
