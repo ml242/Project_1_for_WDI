@@ -118,6 +118,10 @@ color: red;
   display: inline-block;
 }
 
+.new_user label {
+   width: 125px;
+  display: inline-block;
+}
 
 [role="banner"] h1{
 margin: 0;

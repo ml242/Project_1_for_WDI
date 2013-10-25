@@ -10,9 +10,8 @@ then when the create action renders new, @user.errors will have errors.
   </ul>
 <% end %>
 
+<div class="text1" "new_user">
 <p>Please fill out the form below to create an account</p>
-
-
 <%= form_for(@user) do |f| %>
 <br>  <%= f.label :name %>
   <%= f.text_field :name %>
@@ -24,3 +23,4 @@ then when the create action renders new, @user.errors will have errors.
   <%= f.password_field :password_confirmation %><br>
  <br> <%= f.submit "Create Account" %>
 <% end %>
+</div>
