@@ -7,7 +7,7 @@ class AscendsController < ApplicationController
   end
   def show
     @ascend = Ascend.find(params[:id])
-    @climbs = @ascend.climbs || []
+    @climbs = @ascend.climbs
     # @climbs.stars = @climbs.stars || []
     @users = User.all
   end

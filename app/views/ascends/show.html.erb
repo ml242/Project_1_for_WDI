@@ -5,11 +5,10 @@
 <% if @ascend[:is_dangerous] %>
 <li>Is this climb dangerous? <%= @ascend[:is_dangerous] %></li>
 <% end %>
+<% if @climbs.any? %>
+  <li>Star Rating: <%= @climbs[0].stars %></li>
+<% end %>
 </div>
-<%# if @climbs[0].stars > 0 %>
-<!-- <li>Star Count: <%#= @climbs[0].stars %></li> -->
-<%# end %>
-<br>
 <% @climbs.each do |climb| %>
 <div class="notes">
 <div class="text1">
