@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20131021231343) do
 
   create_table "climbs", :force => true do |t|
     t.text     "description"
-    t.integer  "stars"
+    t.integer  "stars", :default => 0
     t.integer  "user_id"
     t.integer  "ascend_id"
     t.datetime "created_at",  :null => false
