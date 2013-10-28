@@ -5,6 +5,7 @@ GrandSendStation::Application.routes.draw do
     resources :climbs
   end
   resources :ascends
+  resources :crags
 
   get '/' => "session#new"
   get '/signup' => "users#new"

@@ -1,3 +1,9 @@
-Welcome to Crags List!
+<div class="text4">
+Crags List!
+</div>
 
-<li><%= @crags %></li>
+<div class="text4">
+<% @crags.each do |crag| %>
+<li><%= p crag["name"] %></li>
+<% end %>
+</div>
