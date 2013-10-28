@@ -87,6 +87,10 @@ color: red;
   margin-top: 315px;
 }
 
+.gmaps {
+  float: right;
+}
+
 .photo_m img {
   border-radius: 25px;
   width: 45%;
@@ -95,6 +99,11 @@ color: red;
 
 .rapper {
   overflow: hidden;
+}
+
+.gmap {
+  margin-top: 560px;
+  margin-left: 565px;
 }
 
 .text1 a, .text1 a:link, .text1 a:visited{
