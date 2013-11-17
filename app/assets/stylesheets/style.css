@@ -1,3 +1,11 @@
+[role="banner"] h1{
+margin: 0;
+}
+
+[role="banner"] {
+color: #EEEEEE;
+}
+
 header {
   background-color: #2F363E;
   margin-bottom: 40px;
@@ -30,11 +38,6 @@ color: red;
   float: left;
 }
 
-.photo_m {
-  float: left;
-  margin-bottom: 9%;
-}
-
 .text1 {
   background-color: rgba(255, 255, 255, .85);
   width: 40%;
@@ -62,48 +65,52 @@ color: red;
   margin: 15px;
 }
 
-.text4 {
-  background-color: rgba(255, 255, 255, .85);
-  width: 40%;
+#text4 {
   float: left;
+  width: 35%;
+  background-color: rgba(255, 255, 255, .85);
   border: black 1px solid;
   padding: 15px;
   margin: 15px;
+  /*display: inline-block;*/
+  margin-bottom: 3%;
 }
 
 .rat_routes {
   float: left;
   background-color: rgba(255, 255, 255, .85);
-  width: 40%;
+  width: 35%;
   border: black 1px solid;
   padding: 15px;
   margin: 15px;
 }
-
-.photo_m {
+#gmaps {
   float: left;
-  position: absolute;
-  margin-left: 625px;
-  margin-top: 315px;
+  width: 35%;
 }
 
-.gmaps {
-  float: right;
+#photo_m {
+  float: left;
+  width: 35%;
+  height: 35%;
+  margin-bottom: 3%;
 }
 
-.photo_m img {
-  border-radius: 25px;
-  width: 45%;
-  height: 45%;
-}
+#photo_m img {
+  border-radius: 25%;
+  margin-left: 25%;
+  width: 65%;
+  height: 65%;
+/*  margin-bottom: 3%;
+*/}
 
-.rapper {
+
+/*.rapper {
   overflow: hidden;
-}
+}*/
 
-.gmap {
-  margin-top: 560px;
-  margin-left: 565px;
+#gmap {
+  margin-left: 25%;
 }
 
 .text1 a, .text1 a:link, .text1 a:visited{
@@ -117,8 +124,8 @@ color: red;
 
 .text1edit {
   background-color: rgba(255, 255, 255, .85);
-  width: 40%;
-  border: black 1px solid;
+/*  width: 40%;
+*/border: black 1px solid;
   padding: 15px;
   margin: 15px;
 }
@@ -132,13 +139,6 @@ color: red;
   display: inline-block;
 }
 
-[role="banner"] h1{
-margin: 0;
-}
-
-[role="banner"] {
-color: #EEEEEE;
-}
 
 .user_edit {
   margin-top: 44px;
