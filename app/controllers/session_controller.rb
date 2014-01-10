@@ -1,6 +1,10 @@
 class SessionController < ApplicationController
   def new
+    if @current_user
+      redirect_to('/ascends')
+    end
   end
+
   def create
     email = params[:email]
     password = params[:password]
