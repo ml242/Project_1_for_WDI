@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to(login_path)
+      session[:user_id] = @user.id
+      redirect_to('/users')
     else
       # go to users/new.html.erb and just display that page.
       # in this action
