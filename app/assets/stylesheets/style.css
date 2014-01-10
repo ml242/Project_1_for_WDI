@@ -1,29 +1,34 @@
 [role="banner"] h1{
-margin: 0;
+  margin: 0;
 }
 
 [role="banner"] {
-color: #EEEEEE;
+  color: #EEEEEE;
+
 }
 
 header {
   background-color: #2F363E;
   margin-bottom: 40px;
+  position: fixed;
+  width: 100%;
+
 }
 
 html {
-  background: url("/assets/IMG_0214.jpg") no-repeat center center;
+  background: url("/assets/IMG_0214.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 a, a:link, a:visited {
-color: red;
+  color: red;
 }
 
 .login {
   padding-left: 150px;
   padding-top: 150px;
 }
+
 .container {
   line-height: 1.4;
   width: 80%;
@@ -112,24 +117,24 @@ color: red;
 
 /*.rapper {
   overflow: hidden;
-}*/
+  }*/
 
 
-.text1 a, .text1 a:link, .text1 a:visited{
-  color: red;
-}
+  .text1 a, .text1 a:link, .text1 a:visited{
+    color: red;
+  }
 
-.login label {
-  width: 100px;
-  display: inline-block;
-}
+  .login label {
+    width: 100px;
+    display: inline-block;
+  }
 
-.text1edit {
-  background-color: rgba(255, 255, 255, .85);
+  .text1edit {
+    background-color: rgba(255, 255, 255, .85);
 /*  width: 40%;
 */border: black 1px solid;
-  padding: 15px;
-  margin: 15px;
+padding: 15px;
+margin: 15px;
 }
 .text1edit label {
   width: 125px;
