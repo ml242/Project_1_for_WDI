@@ -10,9 +10,10 @@
 <% end %>
 </div>
 <% @climbs.each do |climb| %>
-<div class="notes">
-<div class="text1">
-<ul><li>user notes: <div class="time"><%= climb[:name] %><%= climb[:created_at] %></div></li></ul>
-<%= climb[:description] %></div>
-</div>
+  <div class="notes">
+  <div class="text1">
+  <ul><li>Route notes: <%= climb.user.climber_name || climb.user.name %>
+    <div class="time"><%= climb[:name] %><%= climb[:created_at].to_formatted_s(:long) %></div></li></ul>
+  <%= climb[:description] %></div>
+  </div>
 <% end %>
