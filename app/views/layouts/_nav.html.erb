@@ -3,8 +3,8 @@
     <div class="container grid">
 <div class="unit three-fifths">
       <h1>Welcome to the Grand Send Station</h1>
-    <%# client = Weatherman::Client.new %>
-    The temperature is: <%#=client.lookup_by_location('11101').condition['temp']%> degrees, celsius. Perfect for climbing in Central Park!
+    <% client = Weatherman::Client.new %>
+    The temperature is: <%=client.lookup_by_location('11101').condition['temp']%> degrees, celsius. Perfect for climbing in Central Park!
     </div>
     <div class="unit two-fifths">
       <div class="user_edit">

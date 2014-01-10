@@ -2,11 +2,13 @@
 <ul>
 <% @user.climbs.each do |climb| %>
   <% ascend = Ascend.find(climb[:ascend_id]) %>
-  <li><a href="/ascends/<%= climb[:ascend_id] %>"><%= ascend[:name] %></a> |
-  <%= link_to 'Add Details', edit_user_climb_path(@user, climb) %></a></li>
+  <li><a href="/ascends/<%= climb[:ascend_id] %>"><%= ascend[:name] %></a><% if @current_user.id == @user.id %> |
+  <%= link_to 'Add Details', edit_user_climb_path(@user, climb) %></a><% end %></li>
 <br>
 <% end %>
 </ul></div>
 <br>
 
-<div class="text1"><h3><%= link_to 'Add a new climb to your tick list', new_user_climb_path(@user) %></h3></div>
+<% if @current_user.id == @user.id %>
+  <div class="text1"><h3><%= link_to 'Add a new climb to your tick list', new_user_climb_path(@user) %></h3></div>
+<% end %>
