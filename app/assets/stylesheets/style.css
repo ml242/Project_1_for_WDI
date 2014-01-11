@@ -170,3 +170,13 @@ margin: 15px;
   font-size-adjust: .6;
 }
 
+.avatar {
+
+  float: right;
+  margin-top: -20%;
+  margin-right: 10%;
+}
+
+.avatar img {
+  border-radius: 2%;
+}
