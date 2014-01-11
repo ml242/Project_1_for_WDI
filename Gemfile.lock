@@ -41,10 +41,6 @@ GEM
     builder (3.0.4)
     callsite (0.0.11)
     choice (0.1.6)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
-    cocaine (0.5.3)
-      climate_control (>= 0.0.3, < 1.0)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -83,11 +79,6 @@ GEM
     multi_json (1.8.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    paperclip (3.5.2)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
     pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -136,7 +127,6 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    rmagick (2.13.2)
     ruby-graphviz (1.0.9)
     sass (3.2.12)
     sass-rails (3.2.6)
@@ -173,7 +163,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   meta_request
-  paperclip
   pg
   pry-debugger
   pry-rails
@@ -181,7 +170,6 @@ DEPENDENCIES
   quiet_assets
   rails (= 3.2.14)
   rails-erd
-  rmagick
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   yahoo_weatherman
