@@ -9,6 +9,7 @@ gem 'pg'
 gem 'yahoo_weatherman'
 gem 'rmagick'
 gem 'paperclip'
+gem 'aws-s3'
 
 # Gems used only for assets and not required
 # in production environments by default.
