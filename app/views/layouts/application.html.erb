@@ -9,14 +9,18 @@
 <body>
   <%= render 'layouts/nav' %>
   <%= flash[:notice] %>
-  <br><br><br><br><br><br>
+  <div class="spacer-main">&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+  </div>
 
   <section class="container">
 
-      <%#= render 'layouts/messages' %>
+    <%#= render 'layouts/messages' %>
     <%= yield %>
-  <br><br><br>
+    <br><br><br>
   </section>
-  </body>
+</body>
 </html>
 

@@ -9,10 +9,11 @@
 
 header {
   background-color: #2F363E;
-  margin-bottom: 40px;
-  position: fixed;
+  /*margin-bottom: 40px;*/
+  position: initial;
   width: 100%;
-
+  /*overflow: auto;*/
+  height: 17.5%;
 }
 
 html {
@@ -168,3 +169,4 @@ margin: 15px;
 .deets a li {
   font-size-adjust: .6;
 }
+

@@ -14,6 +14,7 @@
 
 class User < ActiveRecord::Base
   attr_accessible :name, :climber_name, :avatar, :description, :phone, :email, :password, :password_confirmation
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   has_many :climbs
   has_many :ascends, :through => :climbs
   has_secure_password
