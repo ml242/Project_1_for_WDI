@@ -3,7 +3,8 @@
     <div class="container grid">
       <div class="unit three-fifths">
         <h1>Welcome to the Grand Send Station</h1>
-
+ <% client = Weatherman::Client.new %>
+        The temperature is: <% temp = client.lookup_by_location('11101').condition['temp']%><%= ((temp/9)*5)+32 %> degrees, F. <% if temp > 35 && Time.now.hour > 5 && Time.now.hour < 21 %> <%= "Perfect for climbing in Central Park!" %> <% else %> <%= "Tomorrow is going to be a great day to climb!" %> <% end %>
       </div>
 
         <div class="user_edit">
