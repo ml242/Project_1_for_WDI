@@ -1,1 +1,7 @@
-Hi, <%= @current_user.name.titleize %> | <%= link_to 'Edit Your Details', "/users/#{@current_user.id}/edit" %>
+Hi,
+<% if %>
+  <%= @current_user.climber_name.titleize %>
+<% else %>
+  <%= @current_user.name.titleize %>
+<% end %> |
+<%= link_to 'Edit Your Details', "/users/#{@current_user.id}/edit" %>

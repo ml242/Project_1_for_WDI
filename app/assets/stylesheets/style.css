@@ -171,7 +171,6 @@ margin: 15px;
 }
 
 .avatar {
-
   float: right;
   margin-top: -20%;
   margin-right: 10%;
@@ -179,4 +178,5 @@ margin: 15px;
 
 .avatar img {
   border-radius: 2%;
+  margin-top: 22%;
 }
