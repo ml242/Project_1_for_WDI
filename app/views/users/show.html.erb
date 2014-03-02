@@ -23,15 +23,15 @@
   </div>
 
 
-    <% if @user.avatar_file_name != nil %>
-    <div class="unit two-fifths">
+  <% if @user.avatar_file_name.present? %>
+  <div class="unit two-fifths">
 
-      <div class="avatar">
+    <div class="avatar">
       <%= image_tag @user.avatar.url(:medium) %>
-      </div>
-
     </div>
-    <% end %>
+
+  </div>
+  <% end %>
 
 
 </div>
