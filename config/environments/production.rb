@@ -72,6 +72,7 @@ GrandSendStation::Application.configure do
     }
   }
 
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 
 
   # Log the query plan for queries taking more than this (works
