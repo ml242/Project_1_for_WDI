@@ -117,28 +117,28 @@ a, a:link, a:visited {
 
 
 /*.rapper {
-  overflow: hidden;
-  }*/
+overflow: hidden;
+}*/
 
 
-  .text1 a, .text1 a:link, .text1 a:visited{
-    color: red;
-  }
+.text1 a, .text1 a:link, .text1 a:visited{
+  color: red;
+}
 
-  .login label {
-    width: 100px;
-    display: inline-block;
-  }
+.login label {
+  width: 100px;
+  display: inline-block;
+}
 
-  .text1edit {
-    background-color: rgba(255, 255, 255, .85);
-/*  width: 40%;
-*/border: black 1px solid;
-padding: 15px;
-margin: 15px;
+.text1edit {
+  background-color: rgba(255, 255, 255, .85);
+  width: 50%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 15px;
 }
 .text1edit label {
-  width: 125px;
+  min-width: 125px;
   display: inline-block;
 }
 
