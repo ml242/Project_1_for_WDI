@@ -10,6 +10,7 @@ gem 'yahoo_weatherman'
 gem 'rmagick'
 gem 'paperclip'
 gem 'aws-s3'
+gem 'aws-sdk'
 gem 'newrelic_rpm'
 
 # Gems used only for assets and not required
