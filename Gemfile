@@ -9,7 +9,6 @@ gem 'pg'
 gem 'yahoo_weatherman'
 gem 'rmagick'
 gem 'paperclip', '~> 4.1'
-gem 'aws-s3'
 gem 'aws-sdk'
 gem 'newrelic_rpm'
 
