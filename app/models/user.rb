@@ -17,20 +17,21 @@ class User < ActiveRecord::Base
   validates :email, :password, :password_confirmation, :presence => true
   validates :email, :uniqueness => true
   validates :password, :password_confirmation, :length => { in: 6..20 }
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   has_many :climbs
   has_many :ascends, :through => :climbs
-
   has_secure_password
 
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-    :storage => :s3,
-    :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
 
-  validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
+  # has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  #   :storage => :s3,
+  #   :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
 
-  def s3_credentials
-    {:bucket => "grand send", :access_key_id => "AKIAISK3ZNE3BJLD4LUQ", :secret_access_key => "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"}
-  end
+  # validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
+  # def s3_credentials
+  #   {:bucket => "grand send", :access_key_id => "AKIAISK3ZNE3BJLD4LUQ", :secret_access_key => "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"}
+  # end
 end
