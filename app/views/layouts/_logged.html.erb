@@ -1,5 +1,5 @@
 Hi,
-<% if %>
+<% if @current_user.climber_name %>
   <%= @current_user.climber_name.titleize %>
 <% else %>
   <%= @current_user.name.titleize %>
