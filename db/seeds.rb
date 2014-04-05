@@ -8,7 +8,7 @@
 
 # FIXME remove hard coded ids and associate using activerecord relationships. c1.ascends << a1
 crag0 = Crag.create(name: 'Rat Rock')
-# crag1 = Crag.create(name: 'Cat Rock')
+crag1 = Crag.create(name: 'Cat Rock')
 # crag2 = Crag.create(name: 'Tooth Rock')
 # crag3 = Crag.create(name: 'Chess Rock')
 
@@ -25,6 +25,7 @@ crag0 = Crag.create(name: 'Rat Rock')
 # a3 = Ascend.create(name: 'Chess Rock Traverse', grade: 'V0-', crag_id: 4)
 
 a4 = Ascend.create(name: 'Rat Rock Traverse', grade: 'VO', face_location: 'North')
+crag0.ascends << a4
 a4 = Ascend.create(name: 'High Traverse', grade: 'V1', face_location: 'North')
 a4 = Ascend.create(name: 'Low Traverse', grade: 'V2', face_location: 'North')
 a4 = Ascend.create(name: 'The Exterminator', grade: 'V6', face_location: 'North')
