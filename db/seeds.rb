@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # FIXME remove hard coded ids and associate using activerecord relationships. c1.ascends << a1
-crag0 = Crag.create(name: 'Rat Rock')
+crag0 = Crag.create(name: 'Rat Rock', description: 'Rat Rock is the premiere location to boulder in Central Park. On a given day you can find local residents who have been at the crag for decades as well as tourists taking a break from New York\'s other offerings to enjoy the park. The scene here is as friendly as it is storied. Below are most of the featured routes as well as where they reside on the rock.')
 crag1 = Crag.create(name: 'Cat Rock')
 # crag2 = Crag.create(name: 'Tooth Rock')
 # crag3 = Crag.create(name: 'Chess Rock')
