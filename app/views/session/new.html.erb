@@ -4,6 +4,9 @@
   <div class="text1">This site intends to document the climbing scene at Rat Rock in Central Park from a social perspective. Please login or create an account to access Grand Send Station.</div>
 
   <div class="text1">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
     <%= form_tag('/login') do %>
       <br><%= label_tag :email %>
       <%= text_field_tag :email %>

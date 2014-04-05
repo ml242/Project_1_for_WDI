@@ -14,6 +14,7 @@ class SessionController < ApplicationController
       # redirect_to("/users/#{user.id}")
       redirect_to('/users')
     else
+      flash.now.alert = "Invalid email or password"
       render :new
     end
   end
