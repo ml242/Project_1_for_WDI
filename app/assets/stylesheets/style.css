@@ -73,7 +73,6 @@ a, a:link, a:visited {
 
 #text4 {
   /* float: left; */
-  width: 35%;
   background-color: rgba(255, 255, 255, .85);
   border: black 1px solid;
   padding: 15px;
@@ -99,19 +98,12 @@ a, a:link, a:visited {
 }
 
 #photo_m {
-  margin: 0 auto;
-  text-align: center;
-  border-radius: 25%;
-  width: 65%;
-  height: 65%;
   padding: 15px;
-
 }
 
 #photo_m img {
-  max-width: 34%;
-  max-height: 34%;
-  border-radius: 25%;
+  max-height: 42%;
+  border-radius: 20%;
 }
 
 
