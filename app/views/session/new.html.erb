@@ -1,12 +1,12 @@
 <section class="login">
 
 
-  <div class="text1">This site intends to document the climbing scene at Rat Rock in Central Park from a social perspective. Please login or create an account to access Grand Send Station.
+  <div class="intro-text-panel"><h2>The Station intends to document the climbing scene at Rat Rock in Central Park from a social perspective.</h2> 
 
   </div>
 
-  <div class="text1">
-    
+  <div class="intro-text-panel">
+    <h3>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
     <% end %>
@@ -21,7 +21,7 @@
     
     <br>
     <%= link_to "Create an Account", new_user_path %>
-  
+    </h3>
   </div>
 
 </section>
