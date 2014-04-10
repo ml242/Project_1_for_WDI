@@ -30,6 +30,10 @@ a, a:link, a:visited {
   margin: 0 auto;
 }
 
+.spacer-main {
+  margin-bottom: 1%;
+}
+
 .mmmain {
   margin-bottom: 9%;
 }
@@ -67,37 +71,29 @@ a, a:link, a:visited {
   margin: 15px;
 }
 
-#text4 {
-  /* float: left; */
+.crag-description {
   background-color: rgba(255, 255, 255, .85);
   border: black 1px solid;
   padding: 15px;
-  margin: 15px;
-  /*display: inline-block;*/
   margin-bottom: 3%;
 }
 
-.rat_routes {
-  /* float: left; */
+.crag-routes {
   background-color: rgba(255, 255, 255, .85);
-  /* width: 35%; */
   border: black 1px solid;
   padding: 15px;
-  margin: 15px;
 }
 #gmap {
   margin-top: 15px;
   margin: 0 auto;
   padding: 15px;
-  float: left;
-  width: 35%;
 }
 
-#photo_m {
+.rat-collage-map {
   padding: 15px;
 }
 
-#photo_m img {
+.rat-collage-map img {
   max-height: 42%;
   border-radius: 20%;
 }
