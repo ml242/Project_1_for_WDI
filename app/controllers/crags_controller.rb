@@ -6,8 +6,7 @@ class CragsController < ApplicationController
     @crags = Crag.new
   end
   def show
-    @crags = Crag.find(params[:id])
-    @ascends
+    @crag = Crag.find(params[:id])
   end
   def create
     @crags = Crag.create

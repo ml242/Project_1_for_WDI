@@ -1,4 +1,20 @@
-<h1>hello. welcome to crags. </h1>
-<%= @crags.name %>
-<%= @crags.ascends.each do |ascend| puts ascend %>
-<% end %>
+<div class="unit one-third">
+	<div class="crag-routes">
+
+	<h1><%= @crag.name.capitalize %></h1>
+		
+	<% @crag.ascends.each do |ascend| %>
+		<ul><%= puts ascend %></ul>
+	<% end %>
+
+	</div>
+</div>
+
+<div class="unit two-thirds">
+
+  <div class="crag-description">
+		<li><%= @crag.description %></li>
+  </div>
+
+
+</div>

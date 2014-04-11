@@ -1,9 +1,25 @@
-<div class="text4">
-Crags List!
+<div id="gmap" class="unit whole">
+  <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=210710847461107118193.0004e9bdb8f0d4e4e265c&amp;ie=UTF8&amp;t=m&amp;z=17&amp;output=embed"></iframe><br />
 </div>
 
-<div class="text4">
-<% @crags.each do |crag| %>
-<li><%= p crag["name"] %></li>
-<% end %>
+<div class="unit one-third">
+  <div class="crag-routes">
+    <h1>Crags List!</h1>
+	   <% @crags.each do |crag| %>
+		<li><a href="crags/<%= crag.id%> "><%= crag.name %></a></li>
+	<% end %>
+  </div>
 </div>
+
+
+<div class="unit two-thirds">
+
+  <div class="crag-description">
+    <% @crags.each do |crag| %>
+		<li><%= p crag["description"] %></li>
+	<% end %>
+  </div>
+
+
+</div>
+
