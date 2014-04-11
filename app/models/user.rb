@@ -24,14 +24,4 @@ class User < ActiveRecord::Base
   has_secure_password
 
 
-
-  # has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  #   :storage => :s3,
-  #   :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
-
-  # validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
-
-  # def s3_credentials
-  #   {:bucket => "grand send", :access_key_id => "AKIAISK3ZNE3BJLD4LUQ", :secret_access_key => "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"}
-  # end
 end
