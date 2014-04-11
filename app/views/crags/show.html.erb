@@ -2,11 +2,12 @@
 	<div class="crag-routes">
 
 	<h1><%= @crag.name.capitalize %></h1>
-		
-	<% @crag.ascends.each do |ascend| %>
-		<ul><%= puts ascend %></ul>
-	<% end %>
+	</div>
 
+	<div class="crag-routes">
+		<% @ascends.each do |ascend| %>
+			<ul><%= ascend.name %></ul>
+		<% end %>
 	</div>
 </div>
 

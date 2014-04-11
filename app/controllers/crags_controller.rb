@@ -7,6 +7,7 @@ class CragsController < ApplicationController
   end
   def show
     @crag = Crag.find(params[:id])
+    @ascends = Ascend.where(:crag_id == @crag.id)
   end
   def create
     @crags = Crag.create
