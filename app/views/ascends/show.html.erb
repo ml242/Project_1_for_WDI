@@ -1,19 +1,29 @@
-<div class="text1">
-<li>Name: <%= @ascend[:name] %></li>
-<li>Difficulty: <%= @ascend[:grade] %></li>
-<li>Face location: <%= @ascend[:face_location] %></li>
-<% if @ascend[:is_dangerous] %>
-<li>Is this climb dangerous? <%= @ascend[:is_dangerous] %></li>
-<% end %>
-<% if @climbs.any? %>
-  <li>Star Rating: <%= @climbs[0].stars %></li>
-<% end %>
+<div class="ascends-text-panel">
+	<li>Name: <%= @ascend[:name] %></li>
+	<li>Difficulty: <%= @ascend[:grade] %></li>
+	<li>Face location: <%= @ascend[:face_location] %></li>
+	<% if @ascend[:is_dangerous] %>
+	<li>Is this climb dangerous? <%= @ascend[:is_dangerous] %></li>
+	<% end %>
+	<% if @climbs.any? %>
+	<li>Star Rating: <%= @climbs[0].stars %></li>
+	<% end %>
 </div>
+
+
 <% @climbs.each do |climb| %>
-  <div class="notes">
-  <div class="text1">
-  <ul><li>Route notes: <a href="../users/<%= climb.user.id %>"><%= climb.user.name.titleize %></a>
-    <div class="time"><%= climb[:name] %><%= climb[:created_at].to_formatted_s(:long) %></div></li></ul>
-  <%= climb[:description] %></div>
-  </div>
-<% end %>
+<div class="ascends-text-panel">
+	<div class="notes">
+		<div class="text1">
+			<ul>
+				
+				<li>Route notes: <a href="../users/<%= climb.user.id %>"><%= climb.user.name.titleize %></a></li>
+				
+				<li><div class="time"><%= climb[:name] %><%= climb[:created_at].to_formatted_s(:long) %></li>
+				<li><%= climb[:description] %></li>
+				
+				</div>
+			</div>
+			</div>
+		</div>
+		<% end %>
