@@ -6,7 +6,7 @@
 
 	<div class="crag-routes">
 		<% @ascends.each do |ascend| %>
-			<ul><%= ascend.name %></ul>
+			<ul><a href="/ascends/<%= ascend.id %>"><%= ascend.name %></a></ul>
 		<% end %>
 	</div>
 </div>
