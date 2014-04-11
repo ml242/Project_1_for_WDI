@@ -89,7 +89,7 @@ a, a:link, a:visited {
   margin: 0 auto;
   /*padding: 15px;*/
   position: relative;
-  padding-bottom: 65.25%;
+  /*padding-bottom: 65.25%;*/
   padding-top: 30px;
   overflow: hidden;
 }
@@ -99,7 +99,7 @@ a, a:link, a:visited {
   top: 0;
   left: 0;
   width: 100%;
-  height: 75%;
+  height: 90%;
 }
 
 .rat-collage-map {

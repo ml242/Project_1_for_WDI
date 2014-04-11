@@ -7,7 +7,7 @@ $(function(){
 
 	var gmapResize = function() {
 		$('#gmap')[0].style.width = $('.container').width() + 'px';
-		// $('#gmap')[0].style.height = $('.container').width() * .15 + 'px';
+		$('#gmap')[0].style.height = $('.container').width() * .75 + 'px';
 	};
 
 	gmapResize();
