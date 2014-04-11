@@ -58,7 +58,7 @@ crag3 = Crag.create(name: 'Chess Rock')
 # a4 = Ascend.create(name: 'Master Ling', grade: 'V7', face_location: 'East', crag_id: crag0.id)
 # a4 = Ascend.create(name: 'Death by Dizzy', grade: 'V2', face_location: 'East', crag_id: crag0.id)
 # a4 = Ascend.create(name: 'Bottom Line', grade: 'V9', face_location: 'East', crag_id: crag0.id)
-# a4 = Ascend.create(name: 'Butter', grade: 'V2', face_location: 'East', crag_id: crag0.id, crag_id: crag0.id)
+# a4 = Ascend.create(name: 'Butter', grade: 'V2', face_location: 'East', crag_id: crag0.id)
 
 a5 = Ascend.create(name: 'Top Seam', grade: 'V0-', face_location: 'West', crag_id: crag2.id)
 a6 = Ascend.create(name: 'Knight\'s Move', grade: 'V2', face_location: 'West', crag_id: crag3.id)
