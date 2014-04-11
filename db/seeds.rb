@@ -8,9 +8,10 @@
 
 # FIXME remove hard coded ids and associate using activerecord relationships. c1.ascends << a1
 # crag0 = Crag.create(name: 'Rat Rock', description: 'Rat Rock is the premiere location to boulder in Central Park. On a given day you can find local residents who have been at the crag for decades as well as tourists taking a break from New York\'s other offerings to enjoy the park. The scene here is as friendly as it is storied. Below are most of the featured routes as well as where they reside on the rock.')
-# crag1 = Crag.create(name: 'Cat Rock')
-crag2 = Crag.create(name: 'Tooth Rock')
-crag3 = Crag.create(name: 'Chess Rock')
+#these need descriptions
+# crag1 = Crag.create(name: 'Cat Rock', description: "A sunny crag with a variety of routes. Some can be a little sketchy, bring a partner and crash pad!")
+# crag2 = Crag.create(name: 'Tooth Rock', description: "A small molar shaped boulder with some tricky routes but right on a major pathway.")
+# crag3 = Crag.create(name: 'Chess Rock', description: "A small assortment of easier friction climbs await you here.")
 
 # a1 = Ascend.create(name: 'Hissy Fit', grade: 'V1', crag_id: 2)
 # a1 = Ascend.create(name: 'The Prophet', grade: 'V10', crag_id: 2)
@@ -60,5 +61,5 @@ crag3 = Crag.create(name: 'Chess Rock')
 # a4 = Ascend.create(name: 'Bottom Line', grade: 'V9', face_location: 'East', crag_id: crag0.id)
 # a4 = Ascend.create(name: 'Butter', grade: 'V2', face_location: 'East', crag_id: crag0.id)
 
-a5 = Ascend.create(name: 'Top Seam', grade: 'V0-', face_location: 'West', crag_id: crag2.id)
-a6 = Ascend.create(name: 'Knight\'s Move', grade: 'V2', face_location: 'West', crag_id: crag3.id)
+# a5 = Ascend.create(name: 'Top Seam', grade: 'V0-', face_location: 'West', crag_id: crag2.id)
+# a6 = Ascend.create(name: 'Knight\'s Move', grade: 'V2', face_location: 'West', crag_id: crag3.id)
