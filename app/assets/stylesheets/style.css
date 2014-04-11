@@ -83,10 +83,23 @@ a, a:link, a:visited {
   border: black 1px solid;
   padding: 15px;
 }
+
 #gmap {
   margin-top: 15px;
   margin: 0 auto;
-  padding: 15px;
+  /*padding: 15px;*/
+  position: relative;
+  padding-bottom: 65.25%;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+#gmap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
 }
 
 .rat-collage-map {
