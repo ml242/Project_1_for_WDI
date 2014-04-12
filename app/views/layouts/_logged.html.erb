@@ -4,4 +4,5 @@ Hi,
 <% else %>
   <%= @current_user.name.titleize %>
 <% end %> |
-<%= link_to 'Edit Your Details', "/users/#{@current_user.id}/edit" %>
+<%= link_to 'Edit Your Details', "/users/#{@current_user.id}/edit" %> | 
+<%= link_to 'Climbers', "/users/" %>

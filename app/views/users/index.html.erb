@@ -1,14 +1,24 @@
 <div class="users-text-panel">
   <p>Check out some of the climbers in our community.</p>
   <% @users.each do |user| %>
-  <li>name: <a href="/users/<%= user[:id] %>"><%= user[:name] %></a>  |
-  <% if user.climbs.any? %>
-    <% rec_climb = Ascend.find(user.climbs.last.ascend_id) %>
-      recent climb:  <a href="/ascends/<%= rec_climb.id %>"><%= rec_climb.name %></a></li>
-  <% end %>
+  <li>name: <a href="/users/<%= user[:id] %>"><%= user[:name] %></a>
 <% end %>
 </div>
 
 <div class="users-text-panel">
-  <p>This site could not have been coded without the incomparable assistance of the new guidebook, <a href="http://stores.sharpendbooks.com/-strse-71/New-York-City-Bouldering/Detail.bok">NYC Bouldering</a>, written by Gaz Leah. He's an awesome guy, and anyone interested in climbing should pick up the book at the <a href="http://thecliffsclimbing.com/lic/">Cliffs LIC</a>. <br><br>Hope to see you at Rat Rock or the gym! <br><br>Matt</p>
+	
+		A selection of recently done routes:
+
+    <% rec_climb = Ascend.find(:all, :order => "id desc", :limit => 1).reverse %>
+    
+    <% rec_climb.each do |ascend| %>  
+			
+			<% if ascend.users.last.name.present? %>
+			
+				<a href="ascends/<%= ascend.id %>"><%= ascend.name  %></a> | <a href="users/<%= ascend.users.last.id %>"><%= ascend.users.last.name %></a><br>
+     
+     <% end %>
+
+    <% end %> 
+
 </div>
