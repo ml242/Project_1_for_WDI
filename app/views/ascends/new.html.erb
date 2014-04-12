@@ -1,2 +1,25 @@
 <%# TODO ascend form %>
-<h1>your new route</h1>
+
+<div class="unit three-fourths">
+<div class="new_user">
+<h1>New route</h1>
+
+<%= form_for(@ascend) do |f| %>
+
+<br><%= f.label :name %><br>
+  	<%= f.text_field :name %>
+<br><%= f.label :face_location %><br>
+  	<%= f.text_field :face_location %>
+<br><%= f.label :is_dangerous, "Is the climb dangerous"%>
+  	<%= f.check_box :is_dangerous %>
+<br><%= f.label :grade %><br>
+  	<%= f.text_field :grade %>
+ <br><%= f.label :comments %><br>
+  	<%= f.text_field :comments %>
+<br><%= f.label :crag %><br>
+<%= f.select :crag_id, options_from_collection_for_select(@crags, :id, :name) %>
+
+ <br><br><%= f.submit %><br>
+<% end %>
+</div>
+</div>

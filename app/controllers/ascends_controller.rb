@@ -3,7 +3,8 @@ class AscendsController < ApplicationController
     @ascends = Ascend.all
   end
   def new
-    @ascends = Ascend.new
+    @ascend = Ascend.new
+    @crags = Crag.all
   end
   def show
     @ascend = Ascend.find(params[:id])
@@ -12,7 +13,9 @@ class AscendsController < ApplicationController
     @users = User.all
   end
   def create
-    @ascends = Ascend.create
+    @ascend = Ascend.create(params[:ascend])
+    @climb = Climb.create(user_id: @current_user.id, ascend_id: Ascend.last.id)
+    redirect_to("/users/#{@current_user.id}/climbs/")
   end
   def edit
     @ascends = Ascend.find params[:id]

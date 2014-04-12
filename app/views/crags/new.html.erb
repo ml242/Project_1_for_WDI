@@ -1,1 +1,16 @@
-This is a new route on a crag.
+<div class="unit two-fifths">
+<div class="new_user">
+<p>Please fill out the form below to create an account</p>
+<%= form_for(@ascends) do |f| %>
+<br>  <%= f.label :name %>
+  <%= f.text_field :name %>
+<br>  <%= f.label :email %>
+  <%= f.text_field :email %>
+ <br> <%= f.label :password %>
+  <%= f.password_field :password %>
+ <br> <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>
+ <br> <%= f.submit "Create Account" %>
+<% end %>
+</div>
+</div>

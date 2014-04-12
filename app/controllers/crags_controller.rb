@@ -3,7 +3,7 @@ class CragsController < ApplicationController
     @crags = Crag.all
   end
   def new
-    @crags = Crag.new
+    @crag = Crag.new
   end
   def show
     @crag = Crag.find(params[:id])
