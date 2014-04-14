@@ -11,6 +11,7 @@ gem 'rmagick'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
 gem 'newrelic_rpm'
+gem 'whenever', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.

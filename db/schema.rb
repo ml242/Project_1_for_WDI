@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140110232544) do
+ActiveRecord::Schema.define(:version => 20140414131034) do
 
   create_table "ascends", :force => true do |t|
     t.string  "name"
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(:version => 20140110232544) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "weathers", :force => true do |t|
+    t.string  "name"
+    t.string  "zip"
+    t.string  "forecast"
+    t.integer "weather_id"
   end
 
 end

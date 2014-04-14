@@ -1,6 +1,6 @@
 GrandSendStation - For NYC's Social Climbers.
 
-The ticklist:
+ticklist:
 
 	XXX Change Routes to list by Crag
 	
