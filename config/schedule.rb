@@ -25,17 +25,8 @@
 
 require 'yahoo_weatherman'
 
-every 2.minutes do
-	client = Weatherman::Client.new
-	temp = client.lookup_by_location('11101').condition['temp']
-	temp = ((temp * 9/5)+32)
-	z11101 = Weather.first
-	z11101.current_temp = temp
-	z11101.save
-end
-
-every 1.minute do
-  p "scheduled task"
+every 1.minutes do
+	rake weather_getter:import
 end
 
 set :output, '/log/schedule.log'
