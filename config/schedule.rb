@@ -23,12 +23,19 @@
 #   attr_accessible :current_temp, :zip, :description, :forecast
 # end
 
+require 'yahoo_weatherman'
 
-every 30.minutes do
+every 2.minutes do
 	client = Weatherman::Client.new
 	temp = client.lookup_by_location('11101').condition['temp']
 	temp = ((temp * 9/5)+32)
 	z11101 = Weather.first
 	z11101.current_temp = temp
-	z11101.update
+	z11101.save
 end
+
+every 1.minute do
+  p "scheduled task"
+end
+
+set :output, '/log/schedule.log'

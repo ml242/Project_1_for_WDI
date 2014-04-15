@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20140414131034) do
   end
 
   create_table "weathers", :force => true do |t|
-    t.string  "name"
+    t.string  "current_temp"
     t.string  "zip"
     t.string  "forecast"
     t.integer "weather_id"

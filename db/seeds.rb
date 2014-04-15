@@ -26,6 +26,7 @@ a2 = Ascend.create(name: 'Cavity Crack', grade: 'V0', crag_id: crag2.id)
 
 a3 = Ascend.create(name: 'Check Mate', grade: 'V0-', crag_id: crag3.id)
 a3 = Ascend.create(name: 'Chess Rock Traverse', grade: 'V0-', crag_id: crag3.id)
+a6 = Ascend.create(name: 'Knight\'s Move', grade: 'V2', face_location: 'West', crag_id: crag3.id)
 
 a4 = Ascend.create(name: 'Rat Rock Traverse', grade: 'VO', face_location: 'North', crag_id: crag0.id)
 a4 = Ascend.create(name: 'High Traverse', grade: 'V1', face_location: 'North', crag_id: crag0.id)
@@ -63,5 +64,4 @@ a4 = Ascend.create(name: 'Death by Dizzy', grade: 'V2', face_location: 'East', c
 a4 = Ascend.create(name: 'Bottom Line', grade: 'V9', face_location: 'East', crag_id: crag0.id)
 a4 = Ascend.create(name: 'Butter', grade: 'V2', face_location: 'East', crag_id: crag0.id)
 
-a5 = Ascend.create(name: 'Top Seam', grade: 'V0-', face_location: 'West', crag_id: crag2.id)
-a6 = Ascend.create(name: 'Knight\'s Move', grade: 'V2', face_location: 'West', crag_id: crag3.id)
+# a5 = Ascend.create(name: 'Top Seam', grade: 'V0-', face_location: 'West', crag_id: crag2.id)

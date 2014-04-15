@@ -3,7 +3,7 @@
     <div class="container grid">
       <div class="unit three-fifths">
         <h1>Welcome to the Grand Send Station</h1>
-        <p>The temperature is: <%= @weather.current_temp %> degrees, F. <% if temp > 35 && Time.now.hour > 5 && Time.now.hour < 21 %> <%= "Perfect for climbing in Central Park!" %> <% else %> <%= "Tomorrow is going to be a great day to climb!" %> </p><% end %>
+        <p>The temperature is: <%= @weather.current_temp.to_i %> degrees, F. <% if @weather.current_temp.to_i > 35 && Time.now.hour > 5 && Time.now.hour < 21 %> <%= "Perfect for climbing in Central Park!" %> <% else %> <%= "Tomorrow is going to be a great day to climb!" %> </p><% end %>
       </div>
 
         <div class="user_edit">
