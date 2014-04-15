@@ -1,7 +1,5 @@
 require 'yahoo_weatherman'
 
-desc "This task is called by the Heroku scheduler add-on"
-task :weather_getter => :environment do
 desc "import data from yahoo to add to database"
   task :import => :environment do
   		p 'getting local weather'
