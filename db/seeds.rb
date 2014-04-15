@@ -65,3 +65,5 @@ a4 = Ascend.create(name: 'Bottom Line', grade: 'V9', face_location: 'East', crag
 a4 = Ascend.create(name: 'Butter', grade: 'V2', face_location: 'East', crag_id: crag0.id)
 
 # a5 = Ascend.create(name: 'Top Seam', grade: 'V0-', face_location: 'West', crag_id: crag2.id)
+
+a = Weather.new(current_temp: '99', zip: '11101')
