@@ -13,9 +13,11 @@
     
     <% rec_climb.each do |ascend| %>  
 			
-			<% if ascend.users.last.name.present? %>
+			<% if ascend.users.last != nil %>
 			
 				<a href="ascends/<%= ascend.id %>"><%= ascend.name  %></a> | <a href="users/<%= ascend.users.last.id %>"><%= ascend.users.last.name %></a><br>
+      <% else %>
+        <p><em>Someone better get on these routes!</em></p>
      
      <% end %>
 
