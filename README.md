@@ -18,4 +18,6 @@ ticklist:
 
 	Create a table for Yahoo Weatherman and setup a chronjob to get the weather once an hour.
 
+	add V404 with disapearing boulder
+
 	
