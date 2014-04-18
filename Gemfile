@@ -12,7 +12,7 @@ gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
 gem 'newrelic_rpm'
 gem 'whenever', require: false
-gem 'gmapsforrails'
+gem 'gmaps4rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

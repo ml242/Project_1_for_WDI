@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require paper-full
+//= require myPaperRoutes
+//= require background_styles

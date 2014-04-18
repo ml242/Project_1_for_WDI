@@ -12,6 +12,6 @@
  *= require normalize
  *= require gridism
  *= require style
+ *= require app
+ *= require_self
  */
-
-@import "fourOhfour.css.scss";
