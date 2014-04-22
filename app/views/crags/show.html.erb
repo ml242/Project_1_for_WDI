@@ -1,22 +1,42 @@
+
+
+
 <div class="unit one-third">
+
+
+
 	<div class="crag-routes">
 
-	<h1><%= @crag.name.capitalize %></h1>
+		<h1><%= @crag.name.capitalize %></h1>
+
+
 	</div>
 
 	<div class="crag-routes">
 		<% @ascends.each do |ascend| %>
-			<ul><a href="/ascends/<%= ascend.id %>"><%= ascend.name %></a></ul>
+		<ul><a href="/ascends/<%= ascend.id %>"><%= ascend.name %></a></ul>
 		<% end %>
 	</div>
+
 </div>
+
+
+
+
+
 
 <div class="unit two-thirds">
 
-  <div class="crag-description">
+
+	<div class="crag-description">
 		<li><%= @crag.description %></li>
 		<p>Add a <a href ="/ascends/new">new</a> route to <%= @crag.name %></p>
-  </div>
+	</div>
 
+	<div class="crag-map">
+		
+		<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@crag.latitude}%2C#{@crag.longitude}" %>
+
+	</div>
 
 </div>

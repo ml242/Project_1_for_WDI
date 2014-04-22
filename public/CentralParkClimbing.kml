@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Central Park Climbing</name>
+  <description><![CDATA[Some of the greatest bouldering you can find anywhere is right under millions of noses in Central Park, NYC.]]></description>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/flag.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>Cat Rock</name>
+    <description><![CDATA[<div dir="ltr">A sunny crag with a variety of routes. Some can be a little sketchy, bring a partner and crash pad!</div>]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-73.973694,40.768288,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Chess Rock</name>
+    <description><![CDATA[<div dir="ltr">A small assortment of easier friction climbs await you here.</div>]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-73.974754,40.768997,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Tooth Rock</name>
+    <description><![CDATA[<div dir="ltr">A small molar shaped boulder with some tricky routes but right on a major pathway. </div>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-73.973648,40.767532,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hepatitis Boulder</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-73.971115,40.777927,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Arch Rock</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-73.971352,40.778259,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Freestanding Rock</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-73.968895,40.775963,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Split Rock</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-73.968727,40.776009,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Laskar Rock</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-73.954231,40.795715,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Westside Outcrops</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-73.960930,40.796268,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Worthless Boulder</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-73.954727,40.798023,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Shit Rock</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-73.955688,40.798836,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Roadside Boulder</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-73.957405,40.799370,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Rat Rock</name>
+    <description><![CDATA[<div dir="ltr">Rat Rock is one of the largest in Central Park and a good bet to find like-minded climbers.</div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-73.977638,40.769333,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

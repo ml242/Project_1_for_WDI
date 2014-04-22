@@ -6,13 +6,20 @@ gem 'rails', '3.2.15'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'yahoo_weatherman'
+
+# necessary gems for aws
 gem 'rmagick'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
+
 gem 'newrelic_rpm'
+
+# chron job taskman to add weather to activerecord in production
 gem 'whenever', require: false
+gem 'yahoo_weatherman'
+
 gem 'gmaps4rails'
+gem 'geocoder'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -13,6 +13,6 @@
 #
 
 class Crag < ActiveRecord::Base
-  attr_accessible :name, :description, :photo, :gps_coor, :gps_photo
+  attr_accessible :name, :description, :photo, :gps_coor, :gps_photo, :has_location, :latitude, :longitude
   has_many :ascends
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140414131034) do
+ActiveRecord::Schema.define(:version => 20140422183924) do
 
   create_table "ascends", :force => true do |t|
     t.string  "name"
@@ -38,8 +38,11 @@ ActiveRecord::Schema.define(:version => 20140414131034) do
     t.string   "photo"
     t.string   "gps_coor"
     t.string   "gps_photo"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.boolean  "has_location", :default => false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "users", :force => true do |t|
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20140414131034) do
   end
 
   create_table "weathers", :force => true do |t|
-    t.string  "current_temp"
+    t.integer "current_temp"
     t.string  "zip"
     t.string  "forecast"
     t.integer "weather_id"
