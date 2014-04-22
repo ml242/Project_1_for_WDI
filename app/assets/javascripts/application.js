@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require paper-full
+//= require underscore
+//= require gmaps/google
 //= require myPaperRoutes
 //= require background_styles

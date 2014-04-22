@@ -1,5 +1,10 @@
 <div id="gmap" class="unit whole">
   <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/ms?hl=en&amp;msid=210710847461107118193.0004e9bdb8f0d4e4e265c&amp;msa=0&amp;ie=UTF8&amp;ll=40.783452,-73.965983&amp;spn=0.031836,0.023501&amp;t=h&amp;output=embed"></iframe><br />
+
+
+
+
+
 </div>
 
 <div class="unit one-third">
@@ -23,3 +28,21 @@
 
 </div>
 
+
+
+
+
+
+    <%# @crags.each do |crag| %>
+  <!-- <div class="crag-map"> -->
+    
+      <%#= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=true&zoom=16&markers=#{crag.latitude}%2C#{crag.longitude}" %>
+  
+  <!-- </div> -->
+    <%# end %>
+
+<% markers = handler.addMarkers(<%=raw @hash.to_json %>); %>
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
