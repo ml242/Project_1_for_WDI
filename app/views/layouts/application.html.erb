@@ -9,18 +9,62 @@
   <%= csrf_meta_tags %>
 
       <script type="text/javascript">
+        // // Only executed our code once the DOM is ready.
+        // window.onload = function() {
+        //     // Get a reference to the canvas object
+        //     var canvas = document.getElementById('myCanvas');
+        //     // Create an empty project and a view for the canvas:
+        //     paper.setup(canvas);
+
+        //     var myPath = new paper.Path();
+        //     myPath.strokeColor = 'black';
+
+        //     // Draw the view now:
+        //     paper.view.draw();
+
+        //     var tool = new paper.Tool();
+
+        //     tool.onMouseDown = function(event) {
+        //         myPath.add(event.point);
+        //     }
+
+
+
+
         // Only executed our code once the DOM is ready.
         window.onload = function() {
             // Get a reference to the canvas object
             var canvas = document.getElementById('myCanvas');
             // Create an empty project and a view for the canvas:
+
+
+            // var background = new Image();
+            // background.src = "/towerwall.jpg";
+
+          // Make sure the image is loaded first otherwise nothing will draw.
+          // canvas.drawImage(background,0,0);   
+          
+
+
+
             paper.setup(canvas);
 
             var myPath = new paper.Path();
             myPath.strokeColor = 'black';
 
+            // var raster = new Raster('last-upload');
+
+            // raster.position = view.center;
+
+            // raster.scale(0.5);
+            
             // Draw the view now:
             paper.view.draw();
+
+
+
+
+
 
             var tool = new paper.Tool();
 
@@ -32,22 +76,20 @@
 
 
 
+
+
 // from the internet /////////////////
 
-            var canvas = document.getElementById("canvas"),
-            ctx = canvas.getContext("2d");
+            // var canvas = document.getElementById("canvas"),
+          //   ctx = canvas.getContext("2d");
 
-            canvas.width = 903;
-            canvas.height = 657;
+          //   var background = new Image();
+          //   background.src = "/towerwall.jpg";
 
-
-            var background = new Image();
-            background.src = "http://www.samskirrow.com/background.png";
-
-          // Make sure the image is loaded first otherwise nothing will draw.
-          background.onload = function(){
-            ctx.drawImage(background,0,0);   
-          }​
+          // // Make sure the image is loaded first otherwise nothing will draw.
+          // background.onload = function(){
+          //   ctx.drawImage(background,0,0);   
+          // }​
 
           // draw whatever else over top of it on the canvas.
 
