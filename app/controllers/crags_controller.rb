@@ -1,4 +1,6 @@
 class CragsController < ApplicationController
+  
+
   def index
     @crags = Crag.all
     @hash = Gmaps4rails.build_markers(@crags) do |crag, marker|
@@ -6,6 +8,8 @@ class CragsController < ApplicationController
       marker.lng crag.longitude
     end
   end
+
+
   def new
     @crag = Crag.new
   end
