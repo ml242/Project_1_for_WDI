@@ -16,12 +16,4 @@ $(function(){
 	gmapResize();
 
 
-	var gmapResize = function() {
-		$('.gmaps4rails-map')[0].style.width = $('.container').width() + 'px';
-		$('.gmaps4rails-map')[0].style.height = $('.container').width() * 0.70 + 'px';
-	};
-
-
-
 });
-

@@ -15,5 +15,6 @@
 //= require paper-full
 //= require underscore
 //= require gmaps/google
+//= require nav
 //= require myPaperRoutes
 //= require background_styles

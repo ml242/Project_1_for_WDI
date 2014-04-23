@@ -1,18 +1,24 @@
-<div id="gmap" class="unit whole">
+<div id="gmap">
+  <div id="multi_markers" style='width: 100%; height: 100%;'></div>
+</div>
+
+<!-- old code for map -->
+
+<!-- <div id="gmap" class="unit whole">
   <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/ms?hl=en&amp;msid=210710847461107118193.0004e9bdb8f0d4e4e265c&amp;msa=0&amp;ie=UTF8&amp;ll=40.783452,-73.965983&amp;spn=0.031836,0.023501&amp;t=h&amp;output=embed"></iframe><br />
 
 
 
 
 
-</div>
+</div> -->
 
 <div class="unit one-third">
   <div class="crag-routes">
     <h1>Crags List!</h1>
-	   <% @crags.each do |crag| %>
-		<li><a href="crags/<%= crag.id%> "><%= crag.name %></a></li>
-	<% end %>
+     <% @crags.each do |crag| %>
+    <li><a href="crags/<%= crag.id%> "><%= crag.name %></a></li>
+  <% end %>
   </div>
 </div>
 
@@ -21,8 +27,8 @@
 
   <div class="crag-description">
     <% @crags.each do |crag| %>
-		<li><%= p crag["description"] %></li>
-	<% end %>
+    <li><%= p crag["description"] %></li>
+  <% end %>
   </div>
 
 
@@ -40,20 +46,21 @@
   
   <!-- </div> -->
     <%# end %>
-<div style='width: 800px;'>
-  <div id="multi_markers" style='width: 800px; height: 400px;'></div>
-</div>
 
     <script type="text/javascript">
 
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
       var markers = handler.addMarkers(
-        <%=raw @hash.to_json %>
+        <%=raw @hash.to_json %>,
+        <%=raw @user_hash.to_json %>
         );
+
 
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
+
+      
     
 
     });

@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @ascends = Ascend.all
+
+    respond_to do |format|
+      format.json { render json: @users }
+    end
   end
 
   def new
@@ -37,6 +41,13 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.update_attributes(params[:user])
     redirect_to user_path
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.json { render json: @user }
+      else
+        format.json { render json: @user.errors, status: unprocessable_entity }
+      end
+    end
   end
 
 

@@ -13,7 +13,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :climber_name, :avatar, :description, :phone, :email, :password, :password_confirmation
+  attr_accessible :name, :climber_name, :avatar, :description, :phone, :email, :password, :password_confirmation, :latitude, :longitude, :gmaps, :ip_address
   validates :email, :password, :password_confirmation, :presence => true
   validates :email, :uniqueness => true
   validates :password, :password_confirmation, :length => { in: 6..20 }
@@ -23,5 +23,6 @@ class User < ActiveRecord::Base
   has_many :ascends, :through => :climbs
   has_secure_password
 
-
+  geocoded_by :ip_address
+	after_validation :geocode
 end
