@@ -6,6 +6,10 @@ class CragsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@crags) do |crag, marker|
       marker.lat crag.latitude
       marker.lng crag.longitude
+      marker.infowindow crag.name
+    end
+    def gmaps4rails_infowindow
+      self.name
     end
   end
 

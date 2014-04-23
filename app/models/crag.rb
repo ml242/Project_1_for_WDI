@@ -15,4 +15,5 @@
 class Crag < ActiveRecord::Base
   attr_accessible :name, :description, :photo, :gps_coor, :gps_photo, :has_location, :latitude, :longitude
   has_many :ascends
+	# acts_as_gmappable :process_geocoding => false
 end

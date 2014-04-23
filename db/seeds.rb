@@ -20,11 +20,11 @@ crag5 = Crag.create(latitude: 40.778259, longitude: -73.971352, name: 'Arch Rock
 crag6 = Crag.create(latitude: 40.775963, longitude: -73.968895, name: 'Freestanding Rock', description: 'A small boulder with a few warmups in a peaceful setting.')
 crag7 = Crag.create(latitude: 40.776009, longitude: -73.968895, name: 'Split Rock', description: 'One massive sloping boulder cleaved in half leaves a lot of options for new routes and traverses.')
 #northside
-crag7 = Crag.create(latitude:  40.795715, longitude: -73.954231, name: 'Laskar Rock', description: '')
-crag7 = Crag.create(latitude:  40.796268, longitude: -73.960930, name: 'Westside Outcrops', description: '')
-crag7 = Crag.create(latitude:   40.798836, longitude: -73.954727, name: 'Worthless Boulder', description: '')
-crag7 = Crag.create(latitude: 40.776009, longitude: -73.955688, name: 'Shit Rock', description: '')
-crag7 = Crag.create(latitude:  40.799370, longitude: -73.957405, name: 'Roadside Boulder', description: '')
+crag7 = Crag.create(latitude: 40.795715, longitude: -73.954231, name: 'Laskar Rock', description: '')
+crag7 = Crag.create(latitude: 40.796268, longitude: -73.960930, name: 'Westside Outcrops', description: '')
+crag7 = Crag.create(latitude: 40.798023, longitude: -73.954727, name: 'Worthless Boulder', description: '')
+crag7 = Crag.create(latitude: 40.798836, longitude: -73.955688, name: 'Shit Rock', description: '')
+crag7 = Crag.create(latitude: 40.799370, longitude: -73.957405, name: 'Roadside Boulder', description: '')
 
 
 #cat
