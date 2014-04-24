@@ -2,6 +2,10 @@
   <div id="multi_markers" style='width: 100%; height: 100%;'></div>
 </div>
 
+<div id="user-id">
+  <%= @current_user.id %>
+</div>
+
 <!-- old code for map -->
 
 <!-- <div id="gmap" class="unit whole">
@@ -60,12 +64,7 @@
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
 
-      
-    
-
     });
-
-
 
     </script>
 
