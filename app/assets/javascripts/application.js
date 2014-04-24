@@ -18,3 +18,4 @@
 //= require nav
 //= require myPaperRoutes
 //= require background_styles
+//= require camera

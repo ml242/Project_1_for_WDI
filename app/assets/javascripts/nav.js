@@ -1,3 +1,13 @@
+saveImage = function(e){
+  e.preventDefault();
+
+  var canvas = document.getElementById("myCanvas");
+  var img = canvas.toDataURL("image/png");
+  console.log(img);
+  document.write('<img src="'+img+'"/>');
+};
+
+
 createUser = function(e) {
   e.preventDefault();
 
@@ -109,5 +119,12 @@ $(document).ready(function() {
   setInterval(1000);
 
 	updateLocation();
+
+
+  var shutter = $('#shutter-click');
+
+  shutter.click(saveImage());
+
+
 
 });

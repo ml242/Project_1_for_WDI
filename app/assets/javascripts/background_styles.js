@@ -1,3 +1,5 @@
+
+
 $(function(){
 
 	$('section').each(function(i,el) {
@@ -15,5 +17,6 @@ $(function(){
 
 	gmapResize();
 
+	
 
 });
