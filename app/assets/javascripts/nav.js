@@ -63,6 +63,27 @@ updateLocation = function() {
 };
 
 
+addPin = function() {
+  
+
+  var map = document.getElementById("multi_markers");
+
+
+  // this takes your current position (as defined in the ready function and drops into the variable)
+  
+
+  var myLatlng = new google.maps.LatLng(userLat, userLng);
+
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    title:"Hello World!"
+  });
+
+  marker.setMap(map);
+};
+
+
+
 
 // document ready
 $(document).ready(function() {
@@ -78,13 +99,15 @@ $(document).ready(function() {
 // $("#drop-pin").on("click", app.addPin);
 	console.log(userLat);
 	console.log(userLng);  
-	});
-	
+  addPin();
+  });
+  
 
 // when you click on the submit button, it triggers the app.createUser
 // $(".submit").on("click", app.createUser);
 
-	setInterval(1000);
+  setInterval(1000);
+
 	updateLocation();
 
 });

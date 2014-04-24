@@ -8,13 +8,13 @@ class CragsController < ApplicationController
       marker.lng crag.longitude
       marker.infowindow crag.name
     end
-    @user_hash = Gmaps4rails.build_markers(@current_user) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
-    end
-
-    def gmaps4rails_infowindow
-      self.name
+    if @current_user
+      @user_hash = Gmaps4rails.build_markers(@current_user) do |user, marker|
+        marker.lat user.latitude
+        marker.lng user.longitude
+        marker.infowindow user.name
+      end
+      @hash.push(@user_hash[0])
     end
   end
 
