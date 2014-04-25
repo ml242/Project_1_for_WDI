@@ -122,7 +122,14 @@ a, a:link, a:visited {
   display: inline-block;
 }
 
-.text1edit {
+/*EDIT USER STUFF*/
+
+
+.edit_user input {
+  width: 85%;
+}
+
+.user-edit-form {
   background-color: rgba(255, 255, 255, .85);
   width: 50%;
   border: black 1px solid;
@@ -130,26 +137,28 @@ a, a:link, a:visited {
   margin: 15px;
 }
 
-.text1edit label {
-  min-width: 125px;
+.user-edit-form label {
+  min-width: 80%;
   display: inline-block;
 }
 
+
+/* EDIT USER STUFF END */
+
 .new_user {
   background-color: rgba(255, 255, 255, .85);
-  /*min-width: 40%;*/
-  max-width: 75%;
   border: black 1px solid;
   padding: 15px;
   margin: 15px;
 }
 
-.new_user form {
+.new_user input {
+  width: 80%;
+  display: inline-block;
 }
 
 .new_user label {
-  min-width: 30%;
-  display: inline-block;
+  margin-right: 2%;
 }
 
 
@@ -182,6 +191,13 @@ a, a:link, a:visited {
   clear: both;
 }
 
+
+/* ASCEND FORM STUFF*/
+
+.new_ascend input {
+  width: 70%;
+}
+
 .ascends-text-panel {
   background-color: rgba(255, 255, 255, .85);
   border: black 1px solid;
@@ -191,3 +207,18 @@ a, a:link, a:visited {
   float: left;
   clear: both;
 }
+
+/* END ASCEND FORM STUFF*/
+
+/*Climb EDIT FORM*/
+
+.edit_climb {
+  background-color: rgba(255, 255, 255, .85);
+  width: 50%;
+  border: black 1px solid;
+  padding: 15px;
+  margin: 0 0 3% 10%;
+}
+
+
+/* END Climb EDIT FORM*/

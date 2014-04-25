@@ -2,6 +2,7 @@
 the first time through this is User.new, which doesn't have any errors.
 then when the create action renders new, @user.errors will have errors.
 -->
+
 <% if @user.errors.any? %>
 <ul>
   <% @user.errors.messages.each do |error, msg| %>
@@ -9,19 +10,24 @@ then when the create action renders new, @user.errors will have errors.
   <% end %>
   </ul>
 <% end %>
-<div class="unit two-fifths">
+
+<div class="unit one-quarter"></div>
+
+<div class="unit half">
 <div class="new_user">
 <p>Please fill out the form below to create an account</p>
 <%= form_for(@user) do |f| %>
-<br>  <%= f.label :name %>
-  <%= f.text_field :name %>
-<br>  <%= f.label :email %>
-  <%= f.text_field :email %>
- <br> <%= f.label :password %>
-  <%= f.password_field :password %>
- <br> <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %><br>
- <br> <%= f.submit "Create Account" %>
+<%= f.label :name %><br>  
+<%= f.text_field :name %><br> 
+<%= f.label :email %><br>  
+<%= f.text_field :email %><br> 
+<%= f.label :password %> <br> 
+<%= f.password_field :password %><br> 
+<%= f.label :password_confirmation %> <br> 
+<%= f.password_field :password_confirmation %><br>
+<br> <%= f.submit "Create Account" %>
 <% end %>
 </div>
 </div>
+
+<div class="unit one-quarter"></div>

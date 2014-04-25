@@ -2,6 +2,7 @@
 
   <div class="unit three-fifths">
 
+      <% if @user.climbs.count > 1 %>
       <div class="users-text-panel">
         <ul>
           <% @user.climbs.each do |climb| %>
@@ -13,11 +14,14 @@
           <% end %>
         </ul>
       </div>
+      <% end %>
 
-      <% if @current_user.id == @user.id %>
+      <% if @current_user == @user.id %>
+      
         <div class="users-text-panel">
         <h3><%= link_to 'Add a new climb to your tick list', new_user_climb_path(@user) %></h3>
-    </div>
+        </div>
+      
       <% end %>
 
   </div>

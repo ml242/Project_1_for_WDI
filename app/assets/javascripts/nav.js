@@ -1,9 +1,26 @@
+// saveImage = function(event){
+//   console.log('img');
+//   var canvas = document.getElementById("myCanvas");
+//   var img = canvas.toDataURL("image/png");
+//   document.write('<img src="'+img+'"/>');
+// };
+
 saveImage = function(event){
-  console.log('img');
-  var canvas = document.getElementById("myCanvas");
-  var img = canvas.toDataURL("image/png");
-  document.write('<img src="'+img+'"/>');
-};
+    // http://stackoverflow.com/questions/6957034/save-canvas-with-background-image
+    // window.location = canvas.canvas.toDataURL('image/png');
+
+    var myCanvas = document.getElementById('myCanvas'),     
+    img = document.createElement('img'),    
+    ctx = myCanvas.getContext ? myCanvas.getContext('2d') : null;
+
+    myCanvas.width = window.innerWidth;
+    myCanvas.height = window.innerHeight;
+    img.onload = function () {  
+        ctx.drawImage(img, 0, 0, myCanvas.width, myCanvas.height);
+    };
+  img.src = '/image.png';
+  };
+
 
 
 createUser = function(e) {
