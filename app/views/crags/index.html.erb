@@ -3,7 +3,9 @@
 </div>
 
 <div id="user-id">
-  <%= @current_user.id %>
+  <% if @current_user %>
+    <%= @current_user.id %>
+  <% end %>
 </div>
 
 <!-- old code for map -->
@@ -33,6 +35,8 @@
     <% @crags.each do |crag| %>
     <li><%= p crag["description"] %></li>
   <% end %>
+
+
   </div>
 
 
