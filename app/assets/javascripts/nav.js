@@ -1,9 +1,7 @@
-saveImage = function(e){
-  e.preventDefault();
-
+saveImage = function(event){
+  console.log('img');
   var canvas = document.getElementById("myCanvas");
   var img = canvas.toDataURL("image/png");
-  console.log(img);
   document.write('<img src="'+img+'"/>');
 };
 
@@ -98,33 +96,21 @@ addPin = function() {
 // document ready
 $(document).ready(function() {
 
-// this tells your browser to look up your current geolocation and grab those coords
 	navigator.geolocation.getCurrentPosition(function(position){
 	  userLat = position.coords.latitude;
 	  userLng = position.coords.longitude;
-    // then creats map when it knows your geolocation
-// app.makeMap();
-
-// eventlistener when drop pin button is clicked
-// $("#drop-pin").on("click", app.addPin);
 	console.log(userLat);
 	console.log(userLng);  
   addPin();
   });
-  
 
-// when you click on the submit button, it triggers the app.createUser
-// $(".submit").on("click", app.createUser);
-
-  setInterval(1000);
+  // setInterval(1000);
 
 	updateLocation();
 
 
-  var shutter = $('#shutter-click');
-
-  shutter.click(saveImage());
-
+  // $('#shutter-click').click(saveImage(event));
+  $('#shutter-click').click(saveImage);
 
 
 });
