@@ -178,7 +178,7 @@
 
 
 
-$('#myCanvas').css("background", "url(/towerwall.jpg) no-repeat")
+$('#myCanvas').css("background", "url(/towerwall.jpg)")
 
 
 
@@ -190,6 +190,13 @@ $('#myCanvas').css("background", "url(/towerwall.jpg) no-repeat")
 
     </div>
   </section>
+
+
+<script type='text/javascript'>
+  var current_user = <%= @current_user ? @current_user.id : -1 %>;
+</script>
+
+
 </body>
 </html>
 

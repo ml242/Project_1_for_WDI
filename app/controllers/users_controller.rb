@@ -26,30 +26,26 @@ class UsersController < ApplicationController
   end
 
   def show
+    # FIXME use current_user
     @user = User.find(params[:id])
   end
 
   def edit
+    # FIXME use current_user
     @user = User.find(params[:id])
   end
 
   def update
+    # FIXME use current_user
     user = User.find(params[:id])
-    # user.update_attributes(params[:user])
-    # respond_to do |format|
-    #   if user.update_attributes(params[:user])
-    #     format.json { render json: user }
-    #   else
-    #     format.json { render json: user.errors, status: unprocessable_entity }
-    #   end
-    # end
-    redirect_to user_path
-  end
-
-
-  def authenticate
-    if session[:used_id]
-      @current_user = User.find(session[:user_id])
+    user.update_attributes(params[:user])
+    respond_to do |format|
+      if user.update_attributes(params[:user])
+        format.json { render json: user }
+      else
+        format.json { render json: user.errors, status: unprocessable_entity }
+      end
     end
+    # redirect_to user_path
   end
 end

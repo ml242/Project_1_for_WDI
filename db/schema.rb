@@ -11,16 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140423204600) do
+ActiveRecord::Schema.define(:version => 20140426190434) do
 
   create_table "ascends", :force => true do |t|
-    t.string  "name"
-    t.string  "face_location"
-    t.text    "description"
-    t.boolean "is_dangerous"
-    t.string  "grade"
-    t.text    "comments"
-    t.integer "crag_id"
+    t.string   "name"
+    t.string   "face_location"
+    t.text     "description"
+    t.boolean  "is_dangerous"
+    t.string   "grade"
+    t.text     "comments"
+    t.integer  "crag_id"
+    t.string   "crag_base_image_file_name"
+    t.string   "crag_base_image_content_type"
+    t.integer  "crag_base_image_file_size"
+    t.datetime "crag_base_image_updated_at"
+    t.string   "crag_edited_image_file_name"
+    t.string   "crag_edited_image_content_type"
+    t.integer  "crag_edited_image_file_size"
+    t.datetime "crag_edited_image_updated_at"
   end
 
   create_table "climbs", :force => true do |t|

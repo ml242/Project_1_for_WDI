@@ -1,25 +1,26 @@
-// saveImage = function(event){
-//   console.log('img');
-//   var canvas = document.getElementById("myCanvas");
-//   var img = canvas.toDataURL("image/png");
-//   document.write('<img src="'+img+'"/>');
-// };
-
 saveImage = function(event){
-    // http://stackoverflow.com/questions/6957034/save-canvas-with-background-image
-    // window.location = canvas.canvas.toDataURL('image/png');
+  console.log('img');
+  var canvas = document.getElementById("myCanvas");
+  // insert backgriund image here
+  var img = canvas.toDataURL("image/png");
+  document.write('<img src="'+img+'"/>');
+};
 
-    var myCanvas = document.getElementById('myCanvas'),     
-    img = document.createElement('img'),    
-    ctx = myCanvas.getContext ? myCanvas.getContext('2d') : null;
+// saveImage = function(event){
+//     // http://stackoverflow.com/questions/6957034/save-canvas-with-background-image
+//     // window.location = canvas.canvas.toDataURL('image/png');
 
-    myCanvas.width = window.innerWidth;
-    myCanvas.height = window.innerHeight;
-    img.onload = function () {  
-        ctx.drawImage(img, 0, 0, myCanvas.width, myCanvas.height);
-    };
-  img.src = '/image.png';
-  };
+//     var myCanvas = document.getElementById('myCanvas'),     
+//     img = document.createElement('img'),    
+//     ctx = myCanvas.getContext ? myCanvas.getContext('2d') : null;
+
+//     myCanvas.width = window.innerWidth;
+//     myCanvas.height = window.innerHeight;
+//     img.onload = function () {  
+//         ctx.drawImage(img, 0, 0, myCanvas.width, myCanvas.height);
+//     };
+//   img.src = '/image.png';
+//   };
 
 
 
@@ -58,20 +59,17 @@ updateLocation = function() {
     userLat = position.coords.latitude;
     userLng = position.coords.longitude;
 
-  // this is the params that will go into the ajax
-  var a = $('#user-id').text();
-	var user_id = parseInt(a);
   
   var userParams = {
     user: {
-      id: user_id,
+      id: current_user,
       latitude: userLat,
       longitude: userLng
     }
   };
 
 
-  var updateUserUrl = "users/" + user_id;
+  var updateUserUrl = "users/" + current_user;
 
 // updates users lat long through ajax request
     $.ajax({
