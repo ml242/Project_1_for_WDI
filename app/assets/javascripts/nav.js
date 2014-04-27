@@ -7,48 +7,32 @@ saveImage = function(event){
   document.write('<img src="'+img+'"/>');
 };
 
-// saveImage = function(event){
-//     // http://stackoverflow.com/questions/6957034/save-canvas-with-background-image
-//     // window.location = canvas.canvas.toDataURL('image/png');
-
-//     var myCanvas = document.getElementById('myCanvas'),     
-//     img = document.createElement('img'),    
-//     ctx = myCanvas.getContext ? myCanvas.getContext('2d') : null;
-
-//     myCanvas.width = window.innerWidth;
-//     myCanvas.height = window.innerHeight;
-//     img.onload = function () {  
-//         ctx.drawImage(img, 0, 0, myCanvas.width, myCanvas.height);
-//     };
-//   img.src = '/image.png';
-//   };
 
 
+// createUser = function(e) {
+//   e.preventDefault();
 
-createUser = function(e) {
-  e.preventDefault();
+//   // this is the params that will go into the ajax
+//   var userParams = {
+//     user: {
+//       latitude: userLat,
+//       longitude: userLng
+//   }
+// };
 
-  // this is the params that will go into the ajax
-  var userParams = {
-    user: {
-      latitude: userLat,
-      longitude: userLng
-  }
-};
-
-  // ajax request to add data userParams into the data
-  $.ajax({
-    type: "POST",
-    url: "users.json",
-    data: userParams
-  }).done(function(user) {
-    // do something with the response
-    user = user;
-    console.log('response:');
-    console.log(user);
-    app.updateLocation();
-  });
-};
+//   // ajax request to add data userParams into the data
+//   $.ajax({
+//     type: "POST",
+//     url: "users.json",
+//     data: userParams
+//   }).done(function(user) {
+//     // do something with the response
+//     user = user;
+//     console.log('response:');
+//     console.log(user);
+//     app.updateLocation();
+//   });
+// };
 
 
 updateLocation = function() {
@@ -70,7 +54,7 @@ updateLocation = function() {
   };
 
 
-  var updateUserUrl = "users/" + current_user;
+  var updateUserUrl = "/users/" + current_user;
 
 // updates users lat long through ajax request
     $.ajax({
