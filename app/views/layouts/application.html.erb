@@ -51,33 +51,26 @@
 
 
 
-        // Only executed our code once the DOM is ready.
         window.onload = function() {
-            // Get a reference to the canvas object
+ 
             var canvas = document.getElementById('myCanvas');
-            // Create an empty project and a view for the canvas:
 
-
-            // var background = new Image();
-            // background.src = "/towerwall.jpg";
-
-          // Make sure the image is loaded first otherwise nothing will draw.
-          // canvas.drawImage(background,0,0);   
-          
-
-
+            var img = document.createElement('img');
+            img.src = "/towerwall.jpg";
+            img.id = "background-crag";
 
             paper.setup(canvas);
 
             var myPath = new paper.Path();
-            myPath.strokeColor = 'red';
+            myPath.strokeColor = 'black';
 
-            // var raster = new Raster('last-upload');
+            var raster = new paper.Raster(img);
+            raster.layer = 10;
 
-            // raster.position = view.center;
 
-            // raster.scale(0.5);
-            
+
+
+
             // Draw the view now:
             paper.view.draw();
 
@@ -92,9 +85,6 @@
             tool.onMouseDown = function(event) {
                 myPath.add(event.point);
             }
-
-
-
 
 
 
@@ -178,8 +168,7 @@
 
 
 
-$('#myCanvas').css("background", "url(/towerwall.jpg)")
-
+// $('#myCanvas').css("background", "url(/towerwall.jpg)")
 
 
 }

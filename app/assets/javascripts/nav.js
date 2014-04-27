@@ -1,6 +1,7 @@
 saveImage = function(event){
   console.log('img');
   var canvas = document.getElementById("myCanvas");
+  // $('#myCanvas').css("background", "url(/towerwall.jpg)")
   // insert backgriund image here
   var img = canvas.toDataURL("image/png");
   document.write('<img src="'+img+'"/>');

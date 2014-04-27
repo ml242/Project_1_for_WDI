@@ -222,3 +222,7 @@ a, a:link, a:visited {
 
 
 /* END Climb EDIT FORM*/
+
+.hidden {
+  display: none;
+}
