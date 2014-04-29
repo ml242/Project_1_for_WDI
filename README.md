@@ -24,4 +24,6 @@ ticklist:
 
 	add V404 with disapearing boulder
 
+	add discourse message board
+
 	
