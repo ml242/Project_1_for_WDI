@@ -17,7 +17,6 @@ ticklist:
 	Add ability to draw on images so people can see the exact route
 		Only add new route if it has picture
 		check geolocation data on image to make sure it's a new crag
-		
 		Add ability to keep routes private if people subscribe?
 
 	XXX Create a table for Yahoo Weatherman and setup a chronjob to get the weather once an hour.
@@ -25,5 +24,3 @@ ticklist:
 	add V404 with disapearing boulder
 
 	add discourse message board
-
-	
