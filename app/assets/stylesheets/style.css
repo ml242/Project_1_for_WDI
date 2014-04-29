@@ -226,3 +226,7 @@ a, a:link, a:visited {
 .hidden {
   display: none;
 }
+
+canvas {
+  cursor: crosshair;
+}

@@ -99,12 +99,12 @@
               myPath.simplify(10);
 
               // Select the path, so we can see its segments:
-              path.fullySelected = true;
+              myPath.fullySelected = true;
 
-              var newSegmentCount = path.segments.length;
+              var newSegmentCount = myPath.segments.length;
               var difference = segmentCount - newSegmentCount;
               var percentage = 100 - Math.round(newSegmentCount / segmentCount * 100);
-              textItem.content = difference + ' of the ' + segmentCount + ' segments were removed. Saving ' + percentage + '%';
+              // textItem.content = difference + ' of the ' + segmentCount + ' segments were removed. Saving ' + percentage + '%';
             }
 
 
