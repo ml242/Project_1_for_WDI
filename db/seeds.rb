@@ -8,6 +8,9 @@
 
 # FIXME remove hard coded ids and associate using activerecord relationships. c1.ascends << a1
 
+Crag.delete_all
+Ascend.delete_all
+Climb.delete_all
 
 #south park
 crag0 = Crag.create(latitude: 40.769333, longitude: -73.977639, name: 'Rat Rock', description: 'Rat Rock is the premiere location to boulder in Central Park. On a given day you can find local residents who have been at the crag for decades as well as tourists taking a break from New York\'s other offerings to enjoy the park. The scene here is as friendly as it is storied. Below are most of the featured routes as well as where they reside on the rock.')
@@ -15,16 +18,16 @@ crag1 = Crag.create(latitude: 40.768288, longitude: -73.973694, name: 'Cat Rock'
 crag2 = Crag.create(latitude: 40.767532, longitude: -73.973648, name: 'Tooth Rock', description: "Tooth Rock a small molar shaped boulder with some tricky routes but right on a major pathway.")
 crag3 = Crag.create(latitude: 40.768997, longitude: -73.974754, name: 'Chess Rock', description: "Chess Rock is a small assortment of easier friction climbs await you here.")
 #central park
-crag4 = Crag.create(latitude: 40.777927, longitude: -73.971115, name: 'Hepatitis Boulder', description: 'Swampy and challenging climbs off the beaten path.')
-crag5 = Crag.create(latitude: 40.778259, longitude: -73.971352, name: 'Arch Rock', description: 'There are some nice climbs at this rock, bring a buddy and a pad to spot!')
-crag6 = Crag.create(latitude: 40.775963, longitude: -73.968895, name: 'Freestanding Rock', description: 'A small boulder with a few warmups in a peaceful setting.')
-crag7 = Crag.create(latitude: 40.776009, longitude: -73.968895, name: 'Split Rock', description: 'One massive sloping boulder cleaved in half leaves a lot of options for new routes and traverses.')
+crag4 = Crag.create(latitude: 40.777927, longitude: -73.971115, name: 'Hepatitis Boulder', description: 'Hepatitis Boulder has some swampy and challenging climbs off the beaten path.')
+crag5 = Crag.create(latitude: 40.778259, longitude: -73.971352, name: 'Arch Rock', description: 'Arch Rock has some nice climbs, bring a buddy and a pad to spot!')
+crag6 = Crag.create(latitude: 40.775963, longitude: -73.968895, name: 'Freestanding Rock', description: 'Freestanding Rock is a small boulder with a few warmups in a peaceful setting.')
+crag7 = Crag.create(latitude: 40.776009, longitude: -73.968895, name: 'Split Rock', description: 'Split Rock is one massive sloping boulder cleaved in half leaves a lot of options for new routes and traverses.')
 #northside
-crag7 = Crag.create(latitude: 40.795715, longitude: -73.954231, name: 'Laskar Rock', description: '')
-crag7 = Crag.create(latitude: 40.796268, longitude: -73.960930, name: 'Westside Outcrops', description: '')
-crag7 = Crag.create(latitude: 40.798023, longitude: -73.954727, name: 'Worthless Boulder', description: '')
-crag7 = Crag.create(latitude: 40.798836, longitude: -73.955688, name: 'Shit Rock', description: '')
-crag7 = Crag.create(latitude: 40.799370, longitude: -73.957405, name: 'Roadside Boulder', description: '')
+crag7 = Crag.create(latitude: 40.795715, longitude: -73.954231, name: 'Laskar Rock', description: 'Laskar Rock is located near the big bend in the road and the ice rink.')
+crag7 = Crag.create(latitude: 40.796268, longitude: -73.960930, name: 'Westside Outcrops', description: 'Westside Outcrops have a few nice climbs right on the west side of the park. There are ample benches, but bring a good pad to protect from broken glass!')
+crag7 = Crag.create(latitude: 40.798023, longitude: -73.954727, name: 'Worthless Boulder', description: 'Worthless Boulder is anything but what the name suggests. High quality climbs of all levels abound.')
+crag7 = Crag.create(latitude: 40.798836, longitude: -73.955688, name: 'Shit Rock', description: 'Shit Rock might be name for the first person to poop their pants here. A 17 foot slab dominates the area for those willing to brave it.')
+crag7 = Crag.create(latitude: 40.799370, longitude: -73.957405, name: 'Roadside Boulder', description: 'Roadside Boulder has some spicy climbs that aren\'t very often repeated. Bring a friend, a pad, and go early before there\'s a lot of traffic if you want to climb here.')
 
 
 #cat
@@ -78,4 +81,4 @@ a3 = Ascend.create(name: 'Chess Rock Traverse', grade: 'V0-', crag_id: crag3.id)
 a6 = Ascend.create(name: 'Knight\'s Move', grade: 'V2', face_location: 'West', crag_id: crag3.id)
 
 
-a11 = Weather.create(current_temp: 99, zip: '11101')
+a11 = Weather.create(current_temp: 99, zip: '10023')
