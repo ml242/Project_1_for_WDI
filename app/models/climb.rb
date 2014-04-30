@@ -2,13 +2,13 @@
 #
 # Table name: climbs
 #
-#  id         :integer          not null, primary key
-#  histories  :text
-#  stars      :integer
-#  user_id    :integer
-#  ascend_id  :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  description :text
+#  stars       :integer
+#  user_id     :integer
+#  ascend_id   :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 class Climb < ActiveRecord::Base

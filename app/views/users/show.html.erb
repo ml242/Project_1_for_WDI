@@ -2,7 +2,7 @@
 
   <div class="unit three-fifths">
 
-      <% if @user.climbs.count > 1 %>
+      <% if @user.climbs.count >= 1 %>
       <div class="users-text-panel">
         <ul>
           <% @user.climbs.each do |climb| %>

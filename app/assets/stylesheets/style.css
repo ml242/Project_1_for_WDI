@@ -227,6 +227,6 @@ a, a:link, a:visited {
   display: none;
 }
 
-canvas {
+#myCanvas {
   cursor: crosshair;
 }

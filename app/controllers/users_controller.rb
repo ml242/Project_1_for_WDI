@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       session[:user_id] = @user.id
-      redirect_to('/users')
+      redirect_to :back
     else
       # go to users/new.html.erb and just display that page.
       # in this action

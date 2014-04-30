@@ -13,8 +13,15 @@ class AscendsController < ApplicationController
     @users = User.all
   end
   def create
+    if remotipart_submitted?
+      respond_to do |format|
+        if @ascend.save
+          format.js
+        end
+      end
+    end
     @ascend = Ascend.create(params[:ascend])
-    @climb = Climb.create(user_id: @current_user.id, ascend_id: Ascend.last.id)
+    @climb = Climb.create(user_id: @current_user.id, ascend_id: @ascend.id)
     redirect_to("/users/#{@current_user.id}/climbs/")
   end
   def edit

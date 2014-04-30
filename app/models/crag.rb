@@ -2,14 +2,17 @@
 #
 # Table name: crags
 #
-#  id          :integer          not null, primary key
-#  name        :string(255)
-#  description :text
-#  photo       :string(255)
-#  gps_coor    :string(255)
-#  gps_photo   :string(255)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id           :integer          not null, primary key
+#  name         :string(255)
+#  description  :text
+#  photo        :string(255)
+#  gps_coor     :string(255)
+#  gps_photo    :string(255)
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  has_location :boolean          default(FALSE)
+#  latitude     :float
+#  longitude    :float
 #
 
 class Crag < ActiveRecord::Base

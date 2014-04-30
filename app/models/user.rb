@@ -2,14 +2,22 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)
-#  email           :string(255)
-#  password_digest :string(255)
-#  climber_name    :string(255)
-#  avatar          :string(255)
-#  description     :text
-#  phone           :integer
+#  id                  :integer          not null, primary key
+#  name                :string(255)
+#  email               :string(255)
+#  password_digest     :string(255)
+#  climber_name        :string(255)
+#  avatar              :string(255)
+#  description         :text
+#  phone               :binary
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  latitude            :float
+#  longitude           :float
+#  gmaps               :boolean          default(FALSE)
+#  ip_address          :string(255)
 #
 
 class User < ActiveRecord::Base

@@ -12,6 +12,9 @@ gem 'rmagick'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
 
+# jquery gem to handle image AJAX
+gem 'remotipart'
+
 gem 'newrelic_rpm'
 
 # chron job taskman to add weather to activerecord in production

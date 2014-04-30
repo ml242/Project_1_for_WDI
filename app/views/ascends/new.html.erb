@@ -1,28 +1,55 @@
-<%# TODO ascend form %>
+
 
 <div class="unit half">
 <div class="new-ascend-form">
-<h1>New route</h1>
+<% if @current_user %>
+	<h1>New route</h1>
 
-<%= form_for(@ascend) do |f| %>
+	<%= form_for(@ascend) do |f| %>
 
-<br><%= f.label :name %><br>
-  	<%= f.text_field :name %>
-<br><%= f.label :face_location %><br>
-  	<%= f.text_field :face_location %>
-<br><%= f.label :is_dangerous, "Is the climb dangerous"%>
-  	<%= f.check_box :is_dangerous %>
-<br><%= f.label :grade %><br>
-  	<%= f.text_field :grade %>
- <br><%= f.label :comments %><br>
-  	<%= f.text_field :comments %>
-<br><%= f.label :crag %><br>
-<%= f.select :crag_id, options_from_collection_for_select(@crags, :id, :name) %>
+	<%= f.label :name %><br>
+	  	<%= f.text_field :name %>
+	<br><%= f.label :face_location %><br>
+	  	<%= f.text_field :face_location %>
+	<br><%= f.label :is_dangerous, "Is the climb dangerous"%>
+	  	<%= f.check_box :is_dangerous %>
+	<br><%= f.label :grade %><br>
+	  	<%= f.text_field :grade %>
+	 <br><%= f.label :comments %><br>
+	  	<%= f.text_field :comments %>
+	<br><%= f.label :crag %><br>
+		<%= f.select :crag_id, options_from_collection_for_select(@crags, :id, :name) %>
+	<br><%= f.label :crag_base_image_file_name, "Upload an Image", :class => 'required' %><br>
+		<input type="file" capture="camera" accept="image/*" id="takePictureField"> 
+	 <br><br><%= f.submit %><br>
+	<% end %>
 
- <br><br><%= f.submit %><br>
+<% else %>
+	
+	    <h2>Login or Create an Account to add a Route.</h2>
+	    <% flash.each do |name, msg| %>
+	      <%= content_tag :div, msg, class: name %>
+	    <% end %>
+	    
+	    <%= form_tag('/login') do %>
+	      <br><%= label_tag :email %>
+	      <%= text_field_tag :email %>
+	      <br><%= label_tag :password %>
+	      <%= password_field_tag :password %>
+	      <br><br><%= submit_tag "Login" %>
+	    <% end %>
+	    
+	    <br>
+	    <%= link_to "Create an Account", new_user_path %>
+	    
+    
+
 <% end %>
 </div>
 </div>
+
+
+
 
 
 <div class="picture-frame unit half">
