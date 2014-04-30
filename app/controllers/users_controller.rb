@@ -36,16 +36,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    # FIXME use current_user
-    user = User.find(params[:id])
+    user = @current_user
     user.update_attributes(params[:user])
-    respond_to do |format|
-      if user.update_attributes(params[:user])
-        format.json { render json: user }
-      else
-        format.json { render json: user.errors, status: unprocessable_entity }
-      end
-    end
-    # redirect_to user_path
+    # respond_to do |format|
+    #   if user.update_attributes(params[:user])
+    #     format.json { render json: user }
+    #   else
+    #     format.json { render json: user.errors, status: unprocessable_entity }
+    #   end
+    # end
+    redirect_to user_path
   end
 end
