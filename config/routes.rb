@@ -4,6 +4,11 @@ GrandSendStation::Application.routes.draw do
   resources :users do
     resources :climbs
   end
+
+  resources :crags do
+    resources :ascends
+  end
+  
   resources :ascends
   resources :crags
 
