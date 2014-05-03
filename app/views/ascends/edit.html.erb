@@ -1,8 +1,7 @@
-<div class="unit one-quarter"></div>
 <div class="unit half">
 <div class="new-ascend-form">
 <% if @current_user %>
-	<h1>New route</h1>
+	<h1><%= @ascend.name %></h1>
 
 	<%= form_for(@ascend) do |f| %>
 
@@ -16,8 +15,6 @@
 	  	<%= f.text_field :grade %>
 	 <br><%= f.label :comments %><br>
 	  	<%= f.text_field :comments %>
-	<br><%= f.label :crag %><br>
-		<%= f.select :crag_id, options_from_collection_for_select(@crags, :id, :name, :selected => params[:crag_id])  %>
 	<br><%= f.label :crag_base_image_file_name, "Upload an Image", :class => 'required' %><br>
 		<input type="file" capture="camera" accept="image/*" id="takePictureField"> 
 	 <br><br><%= f.submit %><br>
@@ -46,12 +43,11 @@
 <% end %>
 </div>
 </div>
-<div class="unit one-quarter"></div>
 
 
 
 
-<!-- <div class="picture-frame unit half">
+<div class="picture-frame unit half">
 
 <canvas id="myCanvas" class="new-ascend-form">
 <div class="new-picture-upload">
@@ -71,4 +67,4 @@
 
 
 
-</div> -->
+</div>

@@ -13,19 +13,19 @@ class AscendsController < ApplicationController
     @users = User.all
   end
   def create
-    if remotipart_submitted?
-      respond_to do |format|
-        if @ascend.save
-          format.js
-        end
-      end
-    end
+    # if remotipart_submitted?
+    #   respond_to do |format|
+    #     if @ascend.save
+    #       format.js
+    #     end
+    #   end
+    # end
     @ascend = Ascend.create(params[:ascend])
     @climb = Climb.create(user_id: @current_user.id, ascend_id: @ascend.id)
-    redirect_to("/users/#{@current_user.id}/climbs/")
+    redirect_to("/ascends/#{@ascend.id}/edit")
   end
   def edit
-    @ascends = Ascend.find params[:id]
+    @ascend = Ascend.find(params[:id])
   end
   def update
     ascend = Ascend.find(params[:id]).update_attributes params[:ascend]
