@@ -30,7 +30,7 @@ class AscendsController < ApplicationController
   def update
     ascend = Ascend.find(params[:id]).update_attributes params[:ascend]
     # TODO do i have the user_id for this route?
-    redirect_to "/users/#{params[:user_id]}/ascends/#{params[:id]}"
+    redirect_to "/users/#{@current_user.id}/climbs/"
   end
   def destroy
     Ascend.find(params[:id]).destroy
