@@ -1,4 +1,6 @@
 class AscendsController < ApplicationController
+ respond_to :html, :xml, :json
+  respond_to :js, :only => [:create, :update, :destroy]
   def index
     @ascends = Ascend.all
   end
@@ -13,13 +15,6 @@ class AscendsController < ApplicationController
     @users = User.all
   end
   def create
-    # if remotipart_submitted?
-    #   respond_to do |format|
-    #     if @ascend.save
-    #       format.js
-    #     end
-    #   end
-    # end
     @ascend = Ascend.create(params[:ascend])
     @climb = Climb.create(user_id: @current_user.id, ascend_id: @ascend.id)
     redirect_to("/ascends/#{@ascend.id}/edit")
@@ -28,9 +23,14 @@ class AscendsController < ApplicationController
     @ascend = Ascend.find(params[:id])
   end
   def update
-    ascend = Ascend.find(params[:id]).update_attributes params[:ascend]
+    @ascend = Ascend.find(params[:id])
+    respond_with do |format|
+      format.html{  @ascend.update_attributes params[:ascend]
+                    redirect_to "/users/#{@current_user.id}/climbs/"
+                  }
+    end
+    # ascend = Ascend.find(params[:id]).update_attributes params[:ascend]
     # TODO do i have the user_id for this route?
-    redirect_to "/users/#{@current_user.id}/climbs/"
   end
   def destroy
     Ascend.find(params[:id]).destroy
