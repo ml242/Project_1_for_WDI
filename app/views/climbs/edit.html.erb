@@ -10,4 +10,9 @@
 <br>   <%= f.select :stars, options_for_select([["0", "0"], ["1", "1"], ["2", "2"], ["3", "3"]]) %>
 <br><br> <%= f.submit "Update Your Climb Status" %>
 <% end %>
+
+<% if @current_user.id == ascend.climbs.first.user_id %>
+	<a href="/ascends/ <%= ascend.id %>/edit"> edit this climb </a>
+<% end %>
+
 </div>
