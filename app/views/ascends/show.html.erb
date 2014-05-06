@@ -23,7 +23,9 @@
 					<% end %> </li>
 				
 				<li><div class="time"><%= climb[:name] %><%= climb[:created_at].to_formatted_s(:long) %></li>
-				<li><%= climb[:description] %></li>
+				<% if climb[:description].present? %>
+					<li><%= climb[:description] %></li>
+				<% end %>
 				
 				</div>
 			</div>
