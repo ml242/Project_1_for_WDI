@@ -4,7 +4,21 @@ saveImage = function(event){
   // $('#myCanvas').css("background", "url(/towerwall.jpg)")
   // insert backgriund image here
   var img = canvas.toDataURL("image/png");
-  document.write('<img src="'+img+'"/>');
+  var ascend_image = document.write('<img src="'+img+'"/>');
+ $.ajax({
+    type: "POST",
+    url: "/update",
+    data: ascend_image
+  })
+ // .done(function(user) {
+ //    // do something with the response
+ //    user = user;
+ //    console.log('response:');
+ //    console.log(user);
+ //    app.updateLocation();
+ //  });
+
+
 };
 
 
