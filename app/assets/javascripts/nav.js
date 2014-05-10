@@ -7,7 +7,7 @@ saveImage = function(event){
   var ascend_image = document.write('<img src="'+img+'"/>');
  $.ajax({
     type: "POST",
-    url: "/update",
+    url: "/ascends/<%= @ascend.id %>/update",
     data: ascend_image
   })
  // .done(function(user) {

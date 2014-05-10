@@ -52,13 +52,14 @@
 
 
         window.onload = function() {
- 
+            
+            var crag_image = <%= @crag_image ? @ascend.crag_base_image_file_name : "towerwall.jpg" %>;
             var canvas = document.getElementById('myCanvas');
             paper.setup(canvas);
 
             // Let's get layers working
             var img = document.createElement('img');
-            img.src = "/towerwall.jpg";
+            img.src =  "/"+crag_image;
             img.id = "background-crag";
             var layer = new paper.Layer();
             var raster = new paper.Raster(img);

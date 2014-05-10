@@ -1,6 +1,9 @@
 class AscendsController < ApplicationController
- respond_to :html, :xml, :json
+  
+  respond_to :html, :xml, :json
   respond_to :js, :only => [:create, :update, :destroy]
+  
+
   def index
     @ascends = Ascend.all
   end

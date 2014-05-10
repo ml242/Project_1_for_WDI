@@ -12,6 +12,12 @@ class ApplicationController < ActionController::Base
   	@weather = Weather.first
   end
 
+  def crag_image
+    if @ascends.crag_base_image_file_name == nil
+      @crag_image = []
+    end
+  end
+
   def authenticate  
   	if session[:user_id]
   		@current_user = User.find(session[:user_id])
