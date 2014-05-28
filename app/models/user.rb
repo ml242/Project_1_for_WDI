@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   # validates :email, :password, :password_confirmation, :presence => true
   # validates :email, :uniqueness => true
   # validates :password, :password_confirmation, :length => { in: 6..20 }
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/avatar/missing.png"
   validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   has_many :climbs
   has_many :ascends, :through => :climbs
