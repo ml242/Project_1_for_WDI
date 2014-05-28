@@ -17,6 +17,7 @@ class CragsController < ApplicationController
       end
       @hash.push(@user_hash[0])
     end
+
   end
 
 

@@ -1,4 +1,4 @@
-[role="banner"] h1{
+[role="banner"] h1 {
   margin: 0 0 0 -10px;
 }
 
@@ -9,24 +9,6 @@
 
 [role="banner"] {
   color: #EEEEEE;
-}
-
-header {
-  background-color: #2F363E;
-  /*margin-bottom: 40px;*/
-  position: initial;
-  width: 100%;
-  /*overflow: auto;*/
-  height: 17.5%;
-}
-
-html {
-  background: url("/assets/IMG_0214.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-a, a:link, a:visited {
-  color: red;
 }
 
 .container {
