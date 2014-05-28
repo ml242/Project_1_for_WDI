@@ -14,11 +14,6 @@ class CragsController < ApplicationController
         marker.lat user.latitude
         marker.lng user.longitude
         marker.infowindow user.name
-        marker.picture({
-          :url => user.avatar(:thumb),
-          :width   => 30,
-          :height  => 30
-        })
       end
       @hash.push(@user_hash[0])
     end
