@@ -31,4 +31,6 @@ class User < ActiveRecord::Base
   has_many :ascends, :through => :climbs
   has_secure_password
 
+
+
 end

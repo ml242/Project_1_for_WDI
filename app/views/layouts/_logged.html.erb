@@ -1,8 +1,4 @@
-Hi,
-<% if @current_user.climber_name %>
-  <%= @current_user.climber_name.titleize %>
-<% else %>
-  <%= @current_user.name.titleize %>
-<% end %> |
+Hi, <%= climber_name %>
+|
 <%= link_to 'Edit Your Details', "/users/#{@current_user.id}/edit" %> | 
 <%= link_to 'Climbers', "/users/" %>
