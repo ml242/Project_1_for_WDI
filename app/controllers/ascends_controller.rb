@@ -29,8 +29,8 @@ class AscendsController < ApplicationController
     @ascend = Ascend.find(params[:id])
     respond_with do |format|
       format.html{  @ascend.update_attributes params[:ascend]
-                    redirect_to "/users/#{@current_user.id}/climbs/"
-                  }
+        redirect_to "/users/#{@current_user.id}/climbs/"
+      }
     end
     # ascend = Ascend.find(params[:id]).update_attributes params[:ascend]
     # TODO do i have the user_id for this route?
