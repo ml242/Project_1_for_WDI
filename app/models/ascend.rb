@@ -1,7 +1,5 @@
-
-
 class Ascend < ActiveRecord::Base
-  attr_accessible :name, :face_location, :description, :is_dangerous, :grade, :comments, :crag_id, 
+  attr_accessible :name, :face_location, :description, :is_dangerous, :grade, :comments, :crag_id
   # :crag_base_image_file_name, :crag_edited_image_file_name
   # has_attached_file :ascend_base_image_file_name, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   # has_attached_file :ascend_edited_image_file_name, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
