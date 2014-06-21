@@ -13,15 +13,15 @@
 	</div>
 
 	<% a = Ascend.where(:id => @crag.id) %>
-	<% if a.empty? == false %>
-	<div class="crag-routes">
-		<% @ascends.each do |ascend| %>
-		<ul><a href="/ascends/<%= ascend.id %>"><%= ascend.name %></a></ul>
-		<% end %>
-	<% else %>
-	<div class="crag-routes">
-		Let's get some routes added here!	
-	</div>	
+	<% if a.empty? == true %>
+		<div class="crag-routes">
+			<% @ascends.each do |ascend| %>
+			<ul><a href="/ascends/<%= ascend.id %>"><%= ascend.name %></a></ul>
+			<% end %>
+		<% else %>
+		<div class="crag-routes">
+			Let's get some routes added here!	
+		</div>	
 	<% end %>
 	
 
