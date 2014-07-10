@@ -198,7 +198,7 @@ DEPENDENCIES
   rails (= 3.2.15)
   rails-erd
   remotipart
-  rmagick
+  rmagick (~> 2.12)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   whenever

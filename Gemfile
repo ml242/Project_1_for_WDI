@@ -8,7 +8,7 @@ gem 'rails', '3.2.15'
 gem 'pg'
 
 # necessary gems for aws
-gem 'rmagick'
+gem 'rmagick', '~> 2.12'
 gem 'paperclip', '~> 4.1'
 gem 'aws-sdk'
 

@@ -1,47 +1,47 @@
 <div class="unit half">
-<div class="new-ascend-form">
-<% if @current_user %>
-	<h1><%= @ascend.name %></h1>
+	<div class="new-ascend-form">
+		<% if @current_user %>
+		<h1><%= @ascend.name %></h1>
 
-	<%= form_for(@ascend) do |f| %>
+		<%= form_for(@ascend) do |f| %>
 
-	<%= f.label :name %><br>
-	  	<%= f.text_field :name %>
-	<br><%= f.label :face_location %><br>
-	  	<%= f.text_field :face_location %>
-	<br><%= f.label :is_dangerous, "Is the climb dangerous"%>
-	  	<%= f.check_box :is_dangerous %>
-	<br><%= f.label :grade %><br>
-	  	<%= f.text_field :grade %>
-	 <br><%= f.label :comments %><br>
-	  	<%= f.text_field :comments %>
-	<br><%= f.label :crag_base_image_file_name, "Upload an Image", :class => 'required' %><br>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+		<br><%= f.label :face_location %><br>
+		<%= f.text_field :face_location %>
+		<br><%= f.label :is_dangerous, "Is the climb dangerous"%>
+		<%= f.check_box :is_dangerous %>
+		<br><%= f.label :grade %><br>
+		<%= f.text_field :grade %>
+		<br><%= f.label :comments %><br>
+		<%= f.text_field :comments %>
+		<br><%= f.label :crag_base_image_file_name, "Upload an Image", :class => 'required' %><br>
 		<input type="file" capture="camera" accept="image/*" id="takePictureField"> 
-	 <br><br><%= f.submit %><br>
-	<% end %>
+		<br><br><%= f.submit %><br>
+		<% end %>
 
-<% else %>
-	
-	    <h2>Login or Create an Account to add a Route.</h2>
-	    <% flash.each do |name, msg| %>
-	      <%= content_tag :div, msg, class: name %>
-	    <% end %>
-	    
-	    <%= form_tag('/login') do %>
-	      <br><%= label_tag :email %>
-	      <%= text_field_tag :email %>
-	      <br><%= label_tag :password %>
-	      <%= password_field_tag :password %>
-	      <br><br><%= submit_tag "Login" %>
-	    <% end %>
-	    
-	    <br>
-	    <%= link_to "Create an Account", new_user_path %>
-	    
-    
+		<% else %>
+		
+		<h2>Login or Create an Account to add a Route.</h2>
+		<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, class: name %>
+		<% end %>
+		
+		<%= form_tag('/login') do %>
+		<br><%= label_tag :email %>
+		<%= text_field_tag :email %>
+		<br><%= label_tag :password %>
+		<%= password_field_tag :password %>
+		<br><br><%= submit_tag "Login" %>
+		<% end %>
+		
+		<br>
+		<%= link_to "Create an Account", new_user_path %>
+		
+		
 
-<% end %>
-</div>
+		<% end %>
+	</div>
 </div>
 
 
@@ -49,19 +49,19 @@
 
 <div class="picture-frame unit half">
 
-<canvas id="myCanvas" class="new-ascend-form">
-<div class="new-picture-upload">
-  <img id="last-upload" src="<@ascend.crag_base_image_file_name">
-</div>
-</canvas>
+	<canvas id="myCanvas" class="new-ascend-form">
+		<div class="new-picture-upload">
+			<img id="last-upload" src="<@ascend.crag_base_image_file_name">
+		</div>
+	</canvas>
 
 
 
 
 
-<div id="shutter-click">
-	Click to Save
-</div>
+	<div id="shutter-click">
+		Click to Save
+	</div>
 
 
 
