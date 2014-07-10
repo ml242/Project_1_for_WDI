@@ -15,7 +15,7 @@
 		<%= f.text_field :grade %>
 		<br><%= f.label :comments %><br>
 		<%= f.text_field :comments %>
-		<br><%= f.file_field :base_image, "Upload a Different Image"%><br>
+		<br><%= f.label :base_image, "Upload a Different Image"%><br>
 		<input type="file" capture="camera" accept="image/*" id="takePictureField"> 
 		<br><br><%= f.submit %><br>
 		<% end %>
@@ -51,8 +51,10 @@
 
 	<canvas id="myCanvas" class="new-ascend-form">
 		<div class="new-picture-upload">
-			<img id="last-upload" src="<@ascend.crag_base_image_file_name">
-		</div>
+
+      <%= image_tag @ascend.base_image.url(:medium), :id => "last-upload" %>
+
+ 		</div>
 	</canvas>
 
 

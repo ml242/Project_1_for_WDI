@@ -1,8 +1,6 @@
 class AddAttachmentBaseImageToAscends < ActiveRecord::Migration
   def self.up
-    change_table :ascends do |t|
-      t.attachment :base_image
-    end
+    add_attachment :ascends, :base_image
   end
 
   def self.down
