@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(:version => 20140710135916) do
     t.string   "grade"
     t.text     "comments"
     t.integer  "crag_id"
-    t.string   "base_ascend_image_file_name"
-    t.string   "base_ascend_image_content_type"
-    t.integer  "base_ascend_image_file_size"
-    t.datetime "base_ascend_image_updated_at"
+    t.string   "base_image_file_name"
+    t.string   "base_image_content_type"
+    t.integer  "base_image_file_size"
+    t.datetime "base_image_updated_at"
   end
 
   create_table "climbs", :force => true do |t|

@@ -18,7 +18,7 @@
 	  	<%= f.text_field :comments %>
 	<br><%= f.label :crag %><br>
 		<%= f.select :crag_id, options_from_collection_for_select(@crags, :id, :name, :selected => params[:crag_id])  %>
-	<br><%= f.label :crag_base_image_file_name, "Upload an Image", :class => 'required' %><br>
+	<br><%= f.label :base_image, "Upload an Image", :class => 'required' %><br>
 		<input type="file" capture="camera" accept="image/*" id="takePictureField"> 
 	 <br><br><%= f.submit %><br>
 	<% end %>
