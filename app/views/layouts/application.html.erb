@@ -44,14 +44,14 @@
             var img = document.createElement('img');
             img.src =  crag_image;
             img.id = "background-crag";
-            // img.width = paper.view.size.width
-            // console.log(img)
             var layer = new paper.Layer();
             // var raster = new paper.Raster(img);
             var raster = new paper.Raster({
               source: img.src,
-              position: paper.view.center
+              position: paper.view.center,
+              width: paper.view.width
             });
+            raster.scale(1.5);
 
             // End Layers
 
