@@ -1,15 +1,13 @@
 saveImage = function(event){
-  console.log('img');
+  console.log('trying to save my img');
   var canvas = document.getElementById("myCanvas");
-  // $('#myCanvas').css("background", "url(/towerwall.jpg)")
-  // insert backgriund image here
   var img = canvas.toDataURL("image/png");
-  var ascend_image = document.write('<img src="'+img+'"/>');
+  // var ascend_image = document.write('<img src="'+img+'"/>');
  $.ajax({
     type: "POST",
-    url: "/ascends/<%= @ascend.id %>/update",
-    data: ascend_image
-  })
+    url: "/ascends/",
+    data: img
+  });
  // .done(function(user) {
  //    // do something with the response
  //    user = user;
