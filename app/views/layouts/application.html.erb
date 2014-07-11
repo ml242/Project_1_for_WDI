@@ -29,59 +29,41 @@
       <%= yield %>
 
       <script type="text/javascript">
-        // // Only executed our code once the DOM is ready.
-        // window.onload = function() {
-        //     // Get a reference to the canvas object
-        //     var canvas = document.getElementById('myCanvas');
-        //     // Create an empty project and a view for the canvas:
-        //     paper.setup(canvas);
 
-        //     var myPath = new paper.Path();
-        //     myPath.strokeColor = 'black';
-
-        //     // Draw the view now:
-        //     paper.view.draw();
-
-        //     var tool = new paper.Tool();
-
-        //     tool.onMouseDown = function(event) {
-        //         myPath.add(event.point);
-        //     }
-
-
-
-
-        window.onload = function() {
             // raster.onLoad = function(img) {
             //   var width = paper.view.size.width;
             //   var height = paper.view.size.height;
             // };
             
+        window.onload = function() {
             var crag_image = $('#last-upload').attr('src');
             var canvas = document.getElementById('myCanvas');
             paper.setup(canvas);
 
             // Let's get layers working
             var img = document.createElement('img');
-            // img.src =  "/"+crag_image;
             img.src =  crag_image;
             img.id = "background-crag";
+            // img.width = paper.view.size.width
+            // console.log(img)
             var layer = new paper.Layer();
-            var raster = new paper.Raster(img);
+            // var raster = new paper.Raster(img);
+            var raster = new paper.Raster({
+              source: img.src,
+              position: paper.view.center
+            });
 
             // End Layers
+
             var secondLayer = new paper.Layer();
             secondLayer.activate();
-
-            // debugger;
-
 
             var myPath = new paper.Path();
             myPath.strokeColor = 'red';
             myPath.strokeWidth = 2.5;
 
 
-            // Draw the view now:
+            // Draw the view:
             paper.view.draw();
 
             var tool = new paper.Tool();
@@ -92,30 +74,20 @@
 
             tool.onMouseDrag = function(event) {
               myPath.add(event.point);
-
               // Update the content of the text item to show how many
-              // segments it has:
               textItem.content = 'Segment count: ' + myPath.segments.length;
             }
 
-            // When the mouse is released, we simplify the path:
+            // When the mouse is released, simplify the path:
             function onMouseUp(event) {
               var segmentCount = path.segments.length;
-
-              // When the mouse is released, simplify it:
               myPath.simplify(10);
-
-              // Select the path, so we can see its segments:
               myPath.fullySelected = true;
-
               var newSegmentCount = myPath.segments.length;
               var difference = segmentCount - newSegmentCount;
               var percentage = 100 - Math.round(newSegmentCount / segmentCount * 100);
-              // textItem.content = difference + ' of the ' + segmentCount + ' segments were removed. Saving ' + percentage + '%';
+
             }
-
-
-
 }
 </script>
 
