@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :get_user, :weatherize
+  # after_filter :set_access_control_headers
+  # def set_access_control_headers
+  #   headers['Access-Control-Allow-Origin'] = '*'
+  #   headers['Access-Control-Request-Method'] = '*'
+  # end
 
   private
 
@@ -9,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def weatherize
-  	@weather = Weather.first
+    @weather = Weather.first
   end
 
   def crag_image
@@ -19,9 +24,11 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate  
-  	if session[:user_id]
-  		@current_user = User.find(session[:user_id])
-  	end
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+    end
   end
+
+
 
 end

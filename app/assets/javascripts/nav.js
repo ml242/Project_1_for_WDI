@@ -1,22 +1,22 @@
-saveImage = function(event){
+saveImage = function(event) {
   console.log('trying to save my img');
-  var canvas = document.getElementById("myCanvas");
-  var img = canvas.toDataURL("image/png");
-  // var ascend_image = document.write('<img src="'+img+'"/>');
- $.ajax({
-    type: "POST",
-    url: "/ascends/",
-    data: img
+  img = $(".saveable").saveCanvas({
+        iconPath: "/",
+        showImageLink: false, //Disables converting to an image.
+        showSaveLink: true, //Let the canvas be saved by data url
+        menuLocation: "top-right",
+        menuPadding: 15 //Pixels
   });
- // .done(function(user) {
- //    // do something with the response
- //    user = user;
- //    console.log('response:');
- //    console.log(user);
- //    app.updateLocation();
- //  });
-
-
+  console.log(img);
+  $.ajax({
+    url: "/ascends/id/update",
+    data: img,
+    dataType: "image/png",
+    success: function(data) {
+    console.log(data);
+}
+  })
+  // var ascend_image = document.write('<img src="'+img+'"/>');
 };
 
 
@@ -122,7 +122,7 @@ $(document).ready(function() {
 
 
   // $('#shutter-click').click(saveImage(event));
-  $('#shutter-click').click(saveImage);
+  $('.save-image').click(saveImage);
 
 
 });
