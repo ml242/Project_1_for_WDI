@@ -14,7 +14,6 @@ gem 'aws-sdk'
 
 # jquery gem to handle image AJAX
 gem 'remotipart'
-
 gem 'newrelic_rpm'
 
 # chron job taskman to add weather to activerecord in production
@@ -24,7 +23,10 @@ gem 'yahoo_weatherman'
 gem 'gmaps4rails'
 gem 'geocoder'
 
-# gem 'discourse'
+gem 'formtastic'
+
+# gem 'discourse' //awesome looking 
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -1,0 +1,72 @@
+.intro-text-panel {
+  @media (max-width : 480px) {
+    display: none;
+  }
+  background-color: rgba(255, 255, 255, .85);
+  border: black 1px solid;
+  padding: 15px;
+  margin: 0 0 3% 10%;
+  width: 50%;
+  float: left;
+  clear: both;
+  text-align: center;
+}
+
+.login-form-panel {
+  background-color: rgba(255, 255, 255, .85);
+  border: black 1px solid;
+  padding: 15px;
+  margin: 0 0 3% 10%;
+  width: 50%;
+  float: left;
+  clear: both;
+  text-align: center;
+}
+
+.login-user-form input {
+  width: 60%;
+}
+
+.login-user-form #email {
+  width: 60%;
+  margin-bottom: .5em;
+}
+
+.login-user-form #password {
+  width: 60%;
+  margin-bottom: .5em;
+}
+
+.login-user-form label {
+  text-align: left;
+  width: 100px;
+  display: inline-block;
+}
+
+.login-user-form .login-user {
+  @media (max-width : 700px) {
+    margin-left: 0px;
+  }
+  width: 60%;
+  margin-bottom: .5em;
+  margin-left: 101px;
+}
+
+.create-account {
+  @media (max-width : 700px) {
+    margin-left: 0px;
+  }
+  margin-left: 101px;
+  text-align: center;
+  width: 60%;
+  margin-bottom: .5em;
+  display: inline-block;
+  background: #3194c6;
+  -webkit-appearance: button;
+}
+
+.create-account a {
+  color: black;
+  text-decoration: none;
+  font-weight: lighter;
+}

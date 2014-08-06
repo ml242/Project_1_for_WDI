@@ -5,22 +5,20 @@
 
   </div>
 
-  <div class="intro-text-panel">
+  <div class="login-form-panel">
     <h3>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
     <% end %>
     
-    <%= form_tag('/login') do %>
+    <%= form_tag('/login', :class => "login-user-form") do %>
       <br><%= label_tag :email %>
       <%= text_field_tag :email %>
       <br><%= label_tag :password %>
       <%= password_field_tag :password %>
-      <br><br><%= submit_tag "Login" %>
+      <%= submit_tag("Login", :class => "login-user") %>
     <% end %>
-    
-    <br>
-    <%= link_to "Create an Account", new_user_path %>
+    <span class="create-account"><%= link_to "Create an Account", new_user_path %></span>
     </h3>
   </div>
 

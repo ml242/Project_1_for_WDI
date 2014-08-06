@@ -29,7 +29,7 @@
   float: left;
 }
 
-.intro-text-panel {
+/*.intro-text-panel {
   background-color: rgba(255, 255, 255, .85);
   border: black 1px solid;
   padding: 15px;
@@ -37,7 +37,7 @@
   width: 50%;
   float: left;
   clear: both;
-}
+}*/
 
 .text2 {
   background-color: rgba(255, 255, 255, .85);
@@ -97,11 +97,6 @@
 
 .text1 a, .text1 a:link, .text1 a:visited{
   color: red;
-}
-
-.login label {
-  width: 100px;
-  display: inline-block;
 }
 
 /*EDIT USER STUFF*/

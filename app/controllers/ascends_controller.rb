@@ -31,9 +31,9 @@ class AscendsController < ApplicationController
   end
   
   def update
-    @ascend = Ascend.find(params[:id])
+    ascend = Ascend.find(params[:id])
     respond_with do |format|
-      format.html{  @ascend.update_attributes params[:ascend]
+      format.html{ ascend.update_attributes params[:ascend]
         redirect_to "/users/#{@current_user.id}/climbs/"
       }
     end

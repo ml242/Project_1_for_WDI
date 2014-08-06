@@ -13,5 +13,6 @@
  *= require gridism
  *= require style
  *= require app
+ * require_users/login.css.scss
  *= require_self
  */
