@@ -28,6 +28,7 @@ class AscendsController < ApplicationController
   
   def edit
     @ascend = Ascend.find(params[:id])
+    binding.pry
   end
   
   def update
