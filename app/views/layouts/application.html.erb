@@ -100,6 +100,7 @@
 
 <script type='text/javascript'>
   var current_user = <%= @current_user ? @current_user.id : -1 %>;
+  var current_ascend = parse.int(<%= @ascend ? @ascend.id : -1 %>); 
 </script>
 
 

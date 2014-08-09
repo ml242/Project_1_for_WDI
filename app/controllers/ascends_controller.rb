@@ -33,14 +33,23 @@ class AscendsController < ApplicationController
   
   def update
     ascend = Ascend.find(params[:id])
-    respond_with do |format|
-      format.html{ ascend.update_attributes params[:ascend]
-        redirect_to "/users/#{@current_user.id}/climbs/"
-      }
+    # respond_with do |format|
+    #   format.html{ ascend.update_attributes params[:ascend]
+    #     redirect_to "/users/#{@current_user.id}/climbs/"
+    #   }
+    # end
+    respond_to do |format|
+      if ascend.update_attributes(params[:ascend])
+        format.json { render json: ascend }
+        format.html {redirect_to ascend_path}      
+      else
+        format.html { render action: "edit" }
+        format.json { render json: ascend.errors, status: unprocessable_entity }
+      end
     end
-    # ascend = Ascend.find(params[:id]).update_attributes params[:ascend]
-    # TODO do i have the user_id for this route?
-  end
+  end  
+
+  
   
   def destroy
     Ascend.find(params[:id]).destroy

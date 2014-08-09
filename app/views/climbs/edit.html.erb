@@ -12,7 +12,7 @@
 <% end %>
 
 <% if @current_user.id == ascend.climbs.first.user_id %>
-	<a href="/ascends/ <%= ascend.id %>/edit"> edit this climb </a>
+  <%= link_to "Edit this Climb", edit_user_climb_path  %>
 <% end %>
 
 </div>
