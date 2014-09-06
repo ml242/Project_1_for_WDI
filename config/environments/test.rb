@@ -33,5 +33,9 @@ GrandSendStation::Application.configure do
   config.active_record.mass_assignment_sanitizer = :strict
 
   # Print deprecation notices to the stderr
-  config.active_support.deprecation = :stderr
+  # config.active_support.deprecation = :stderr
+  config.active_support.deprecation = :silence
+
+  config.action_mailer.delivery_method = :test
+  
 end
